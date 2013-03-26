@@ -1,0 +1,454 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animate": true,
+        "designer|userClassName": "logs.Actions",
+        "height": 300,
+        "id": "logs_actions",
+        "minHeight": 200,
+        "styleHtmlContent": false,
+        "width": 550,
+        "overflowY": null,
+        "layout": "accordion",
+        "title": "Actions",
+        "modal": true
+    },
+    "id": "ExtBox1-ext-gen68719",
+    "designerId": "7d2089d9-3fb4-438a-9665-2458c15f8a55",
+    "cn": [
+        {
+            "type": "form",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyForm3",
+                "overflowY": "auto",
+                "bodyPadding": 5,
+                "collapsed": false,
+                "title": "Change property"
+            },
+            "designerId": "1c44a10d-b451-4961-b231-a04dfd1be286",
+            "cn": [
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet",
+                        "collapsed": null,
+                        "collapsible": true,
+                        "title": "Message"
+                    },
+                    "designerId": "84236de6-9598-44cb-a19b-a2d4f89033d4",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField5",
+                                "name": "message",
+                                "fieldLabel": "New message"
+                            },
+                            "designerId": "348ea231-1cf6-424d-bed9-9c0ffab09929"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "designer|userClassName": "MyButton10",
+                                "floating": null,
+                                "style": "float:right",
+                                "text": "Apply change"
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "4b6125f8-bbbd-4664-bbbf-48278e38667a",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "align",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet",
+                        "collapsed": true,
+                        "collapsible": true,
+                        "title": "Date"
+                    },
+                    "designerId": "9f5b86ef-e597-44bd-8578-141ef459a5d7",
+                    "cn": [
+                        {
+                            "type": "datefield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyDateField",
+                                "name": "date",
+                                "fieldLabel": "New date"
+                            },
+                            "designerId": "5cdb41c2-412e-4682-93fc-0316fa1f2259"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "designer|userClassName": "MyButton10",
+                                "floating": null,
+                                "style": "float:right",
+                                "text": "Apply change"
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "37680464-5e8f-4c17-a09e-8456758711ab",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "align",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet",
+                        "collapsed": true,
+                        "collapsible": true,
+                        "title": "Type"
+                    },
+                    "designerId": "e248b14f-a2f2-40df-8997-a8caeca33a64",
+                    "cn": [
+                        {
+                            "type": "combobox",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyComboBox1",
+                                "name": "type",
+                                "fieldLabel": "New date"
+                            },
+                            "designerId": "d5b8188f-4a47-4266-b060-3f8d0b9f9fcf"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "designer|userClassName": "MyButton10",
+                                "floating": null,
+                                "style": "float:right",
+                                "text": "Apply change"
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "621fd52c-dff3-4a0e-bb87-0519872c5348",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "align",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet",
+                        "collapsed": true,
+                        "collapsible": true,
+                        "title": "Level"
+                    },
+                    "designerId": "2e4a2e22-71e8-48c7-8cd4-2f8374b3b29d",
+                    "cn": [
+                        {
+                            "type": "slider",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MySlider2",
+                                "name": "level",
+                                "value": 5,
+                                "fieldLabel": "New date",
+                                "maxValue": 10
+                            },
+                            "designerId": "e2cae385-57af-46c9-94c3-30cc044e549c"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "designer|userClassName": "MyButton10",
+                                "floating": null,
+                                "style": "float:right",
+                                "text": "Apply change"
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "0e920974-68d3-4878-bdea-3ea1c7d883fa",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "align",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet",
+                        "collapsed": true,
+                        "collapsible": true,
+                        "title": "Code"
+                    },
+                    "designerId": "05f5dba4-776a-4d1f-a328-c91af4d3d548",
+                    "cn": [
+                        {
+                            "type": "slider",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MySlider3",
+                                "name": "code",
+                                "value": 500,
+                                "fieldLabel": "New date",
+                                "maxValue": 1000
+                            },
+                            "designerId": "71071d63-1d09-4a92-9943-1a43b625d300"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "designer|userClassName": "MyButton10",
+                                "floating": null,
+                                "style": "float:right",
+                                "text": "Apply change"
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "7f47812b-a509-45a9-84ed-530a854d467e",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "align",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet",
+                        "collapsed": true,
+                        "collapsible": true,
+                        "title": "IP"
+                    },
+                    "designerId": "8ebf6488-62ef-420a-bec9-76ca0e14e938",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|anchor": "100%",
+                                "designer|userClassName": "MyTextField5",
+                                "name": "ip",
+                                "fieldLabel": "New date"
+                            },
+                            "designerId": "34b22fbe-92db-472a-b271-bc1d1717d5e3"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "designer|userClassName": "MyButton10",
+                                "floating": null,
+                                "style": "float:right",
+                                "text": "Apply change"
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "572bfe31-b2a8-49cd-afeb-a8b9daa8a78e",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "align",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyPanel8",
+                "collapsed": true,
+                "title": "Export"
+            },
+            "designerId": "aa56e8e9-7dae-4538-9903-437f465c747b",
+            "cn": [
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dock": "bottom",
+                        "container|align": null,
+                        "designer|userClassName": "MyToolbar3"
+                    },
+                    "designerId": "6dd99814-243d-45b6-93f5-9b7d05391670",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "align": "right",
+                                "layout|flex": null,
+                                "designer|userClassName": "MyButton10",
+                                "floating": null,
+                                "style": "float:right",
+                                "text": "Apply change"
+                            },
+                            "configAlternates": {
+                                "style": "string"
+                            },
+                            "designerId": "0d73b3e8-bb93-47b7-a45a-374ddbd7ca2a",
+                            "customConfigs": [
+                                {
+                                    "group": "(Custom Properties)",
+                                    "name": "align",
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

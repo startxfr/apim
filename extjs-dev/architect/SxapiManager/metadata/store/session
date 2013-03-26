@@ -1,0 +1,165 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "session",
+        "autoLoad": false,
+        "storeId": "session"
+    },
+    "id": "ExtBox1-ext-gen45875",
+    "designerId": "1ef9c224-ebd8-4330-91a3-4368bb2533ec",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy",
+                "url": "http://127.0.0.1/git/startx_api/session?app=sample-apimanager&format=json"
+            },
+            "designerId": "9e6c9412-5fc9-4537-899d-7ded517cce5b",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "idProperty": "_id",
+                        "messageProperty": "message",
+                        "root": "data"
+                    },
+                    "designerId": "d9abab32-2624-4c87-885a-52cb61653417"
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onException",
+                        "fn": "onException",
+                        "implHandler": [
+                            "console.log(\"exception in proxy\");",
+                            "if(response.responseText[0] == '{') {",
+                            " var detailResponse = JSON.parse(response.responseText);  ",
+                            "    if(typeof Ext.Msg !== 'undefined')",
+                            "        Ext.Msg.show(detailResponse.status, detailResponse.message);",
+                            "    else console.log(\"Server response : \"+detailResponse.message);",
+                            "    if(typeof detailResponse.data !== 'undefined')",
+                            "        console.log(detailResponse.data);",
+                            "   var loadingMessage = Ext.getCmp('loadingmessagebox').update(\"... session périmée ...\");",
+                            "    if(typeof loadingMessage !== 'undefined')",
+                            "        loadingMessage.update(\"SERVER ERROR : \"+detailResponse.message);",
+                            "}",
+                            "else {",
+                            "    console.log(response);",
+                            "}",
+                            "",
+                            ""
+                        ],
+                        "name": "exception",
+                        "scope": "me"
+                    },
+                    "designerId": "57fb58b7-ccb5-4724-ac5f-6d901ec41d62"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "_id",
+                "type": "string"
+            },
+            "designerId": "fbb22678-01bf-4900-a081-b830290283f4"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "api",
+                "type": "string"
+            },
+            "designerId": "b133b1cb-1bdb-4292-a287-26bec4c7b3a1"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field5",
+                "name": "state",
+                "type": "int"
+            },
+            "designerId": "7f768fe2-8c37-43cc-af2c-9a9cb0dc2bb0"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field6",
+                "name": "time_end",
+                "type": "date"
+            },
+            "designerId": "f14aa294-c12f-40ff-b03b-32bd2a4bd483"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field7",
+                "name": "time_start",
+                "type": "date"
+            },
+            "designerId": "5c3aafc9-cc65-440f-b15b-32d4505f3145"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field8",
+                "name": "time_update",
+                "type": "date"
+            },
+            "designerId": "b8dac18e-86d0-44bc-b65d-2b1c6efe8384"
+        }
+    ]
+}

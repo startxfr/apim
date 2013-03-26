@@ -1,0 +1,88 @@
+{
+    "type": "window",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "loading",
+        "autoRender": false,
+        "border": null,
+        "height": 202,
+        "hidden": false,
+        "id": "loading",
+        "width": 334,
+        "bodyBorder": null,
+        "closable": false,
+        "title": null,
+        "expandOnShow": false,
+        "modal": true,
+        "plain": false
+    },
+    "id": "ExtBox1-ext-gen34555",
+    "designerId": "457da912-d48c-4ce5-94ce-832df3991bef",
+    "cn": [
+        {
+            "type": "image",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyImg",
+                "height": null,
+                "id": "loadingAppImg",
+                "itemId": "loadingAppImg",
+                "margin": 10,
+                "width": null,
+                "src": "assets/images/startx.png"
+            },
+            "designerId": "8a3226e5-1e5e-4f5d-80db-84e718f58bab"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyContainer",
+                "height": 60,
+                "html": "<h1> SXAPI Manager 1.0</h1>",
+                "margin": "0 0 0 50px",
+                "styleHtmlContent": true,
+                "width": 249
+            },
+            "configAlternates": {
+                "html": "string"
+            },
+            "designerId": "f1db1b07-74a3-4f2f-9344-4d6eee9b348d"
+        },
+        {
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer1",
+                "designer|displayName": null,
+                "html": "start loading...",
+                "id": "loadingmessagebox",
+                "itemId": "loadingmessagebox",
+                "margin": 10,
+                "styleHtmlContent": true
+            },
+            "configAlternates": {
+                "html": "string"
+            },
+            "designerId": "6486d58e-f805-4227-89e4-bd6e758f2ff8"
+        }
+    ]
+}

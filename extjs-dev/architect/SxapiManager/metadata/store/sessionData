@@ -1,0 +1,62 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sessionData",
+        "autoLoad": false,
+        "storeId": "sessionData"
+    },
+    "id": "ExtBox1-ext-gen54262",
+    "designerId": "a6a692b9-827f-4c45-b1ff-da2b176bb66d",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy",
+                "url": "http://127.0.0.1/git/startx_api/session/data?format=json"
+            },
+            "designerId": "f45c5945-bc78-4032-b211-3a093d5f8775",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "idProperty": "_id",
+                        "messageProperty": "message",
+                        "root": "data",
+                        "successProperty": null,
+                        "totalProperty": null
+                    },
+                    "designerId": "a2890868-ec9d-4d5d-90f6-3b6636a4ad77"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field15",
+                "name": "application"
+            },
+            "designerId": "08faa266-c456-4b35-ae33-e95e72a19e3f"
+        }
+    ]
+}

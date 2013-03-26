@@ -1,0 +1,244 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Log",
+        "stores": [
+            "logs"
+        ],
+        "views": [
+            "logs",
+            "logs.Actions",
+            "logs.Filters"
+        ]
+    },
+    "id": "ExtBox1-ext-gen38373",
+    "designerId": "1348f049-8b5e-4756-b99e-37155a0c2c18",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "logs",
+                "ref": "logs",
+                "selector": "#logs"
+            },
+            "designerId": "ee89c2a3-30ba-4a1d-be97-db0a0a50bae5"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "logGrid",
+                "ref": "logGrid",
+                "selector": "#logs_grid"
+            },
+            "designerId": "2e10250a-e2ad-408f-95ce-a966e51d78f5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelSelect",
+                "fn": "onGridpanelSelect",
+                "implHandler": [
+                    "if (record) {",
+                    "    var detailPanel = this.getLogDetail();",
+                    "    var bookTplMarkup = [",
+                    "    'ID: <b>{_id}</b><br/>',",
+                    "    'Date: {date}<br/>',",
+                    "    'Type: {type}<br/>',",
+                    "    'Message: {message}<br/>',",
+                    "    'Session: {session}<br/>',",
+                    "    'Level: {level}<br/>',",
+                    "    'Code: {code}<br/>',",
+                    "    'IP: {ip}<br/>'",
+                    "    ];",
+                    "    var bookTpl = Ext.create('Ext.Template', bookTplMarkup);",
+                    "    bookTpl.overwrite(detailPanel.body, record.data);",
+                    "}",
+                    "sxApp.getController('Log').getLogGrid().down('#delbtn').setDisabled(selModel.length === 0);",
+                    "console.log(\"ddddddddddd\");"
+                ],
+                "name": "select",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "#logs_grid"
+            },
+            "designerId": "92878c3f-34b7-49be-8630-80a4c0dece24"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "logDetail",
+                "ref": "logDetail",
+                "selector": "#logs_detail"
+            },
+            "designerId": "ae4408cd-194f-4168-a397-76062cd2cb1c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridpanelRender",
+                "fn": "onGridpanelRender",
+                "implHandler": [
+                    "console.log(\"rendering log grid\");",
+                    "this.getLogs().down('#delbtn').setDisabled(true);"
+                ],
+                "name": "render",
+                "scope": "me",
+                "designer|targetType": "Ext.grid.Panel",
+                "designer|controlQuery": "#logs_grid"
+            },
+            "designerId": "af7b3c80-23e8-429a-bdd9-1a33d30de49a"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "init",
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "console.log(\"init log controller\");"
+                ]
+            },
+            "designerId": "75c88813-37ca-47c2-b768-d68c93153d1b"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onLaunch",
+                "fn": "onLaunch",
+                "implHandler": [
+                    "console.log(\"launch log controller\");"
+                ]
+            },
+            "designerId": "ed0692fa-16f4-466a-b841-9f412a6873d5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridAddButtonClick",
+                "fn": "onGridAddButtonClick",
+                "implHandler": [
+                    "console.log(\"click log add\");",
+                    "this.getStore('logs').insert(0, {});"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#logs #addbtn"
+            },
+            "designerId": "cdd628a4-1c0d-4b19-9295-e84014d6af2a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridDeleteButtonClick",
+                "fn": "onGridDeleteButtonClick",
+                "implHandler": [
+                    "console.log(\"click log delete\");",
+                    "var selection = this.getLogGrid().getView().getSelectionModel().getSelection()[0];",
+                    "if (selection) {",
+                    "    this.getStore('logs').remove(selection);",
+                    "}"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#logs #delbtn"
+            },
+            "designerId": "1265d870-5de6-47df-92fc-d13d43c9c2d0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridActionButtonClick",
+                "fn": "onGridActionButtonClick",
+                "implHandler": [
+                    "console.log(\"click log action\");",
+                    "view = Ext.create('SxapiManager.view.logs.Actions');",
+                    "view.show();"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#logs #actionbtn"
+            },
+            "designerId": "a302d16d-e540-4a59-ae28-b0fc0c606960"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onGridFilterButtonClick",
+                "fn": "onGridFilterButtonClick",
+                "implHandler": [
+                    "console.log(\"click log filter\");"
+                ],
+                "name": "click",
+                "scope": "me",
+                "designer|targetType": "Ext.button.Button",
+                "designer|controlQuery": "#logs #filterbtn"
+            },
+            "designerId": "eb462a84-8b43-41cc-aed1-ce0c0b24243f"
+        }
+    ]
+}

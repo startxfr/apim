@@ -1,0 +1,209 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "logs",
+        "autoLoad": true,
+        "autoSync": true,
+        "remoteFilter": true,
+        "remoteSort": true,
+        "storeId": "logs",
+        "remoteGroup": null
+    },
+    "id": "ExtBox1-ext-gen228268",
+    "designerId": "9f33bba3-1404-4acc-8d11-47fdd8b52a2d",
+    "cn": [
+        {
+            "type": "restproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyRestProxy",
+                "extraParams": [
+                    "{",
+                    "    format:'json'   ",
+                    "}"
+                ],
+                "url": "http://127.0.0.1/git/startx_api/api/logs"
+            },
+            "designerId": "588e26ef-79da-4400-b053-bb8d02869680",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "idProperty": "_id",
+                        "root": "data"
+                    },
+                    "designerId": "5c8188dd-45b1-4cc5-9be1-8c387cb38f72"
+                },
+                {
+                    "type": "jsonwriter",
+                    "reference": {
+                        "name": "writer",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonWriter",
+                        "allowSingle": false
+                    },
+                    "designerId": "4dd821bc-f2c7-4444-9225-94b29cb7bd0a"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "_id",
+                "type": "string"
+            },
+            "designerId": "cc41a97e-a9e9-4025-8d06-34ad1cc84bd1"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field17",
+                "name": "type",
+                "type": "string"
+            },
+            "designerId": "95deeaf1-1a14-4b99-8d3f-083482a983a8"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "message",
+                "type": "string"
+            },
+            "designerId": "3a6cb632-eee6-4c11-b2b9-c1a51214706b"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field16",
+                "name": "session",
+                "type": "string"
+            },
+            "designerId": "62267537-f72c-4dff-965f-3a4c38504c9a"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "date",
+                "type": "date"
+            },
+            "designerId": "7ade2ceb-cec9-409d-ae12-b24632624f50"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "level",
+                "type": "int"
+            },
+            "designerId": "591c2aa1-4269-41fc-9380-c0480ee5d66f"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "code",
+                "type": "int"
+            },
+            "designerId": "0fe5c65d-97af-486d-962f-adc37812942a"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field",
+                "name": "ip",
+                "type": "string"
+            },
+            "designerId": "191795c3-702c-409d-ad1d-c4225e9fa8bd"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onJsonstoreWrite",
+                "fn": "onJsonstoreWrite",
+                "implHandler": [
+                    "var record = operation.getRecords()[0],",
+                    "    name = Ext.String.capitalize(operation.action),",
+                    "    verb;",
+                    "    ",
+                    "    ",
+                    "if (name == 'Destroy') {",
+                    "    record = operation.records[0];",
+                    "    verb = 'Destroyed';",
+                    "} else {",
+                    "    verb = name + 'd';",
+                    "}",
+                    "console.log(name, Ext.String.format(\"{0} user: {1}\", verb, record.getId()));"
+                ],
+                "name": "write",
+                "scope": "me"
+            },
+            "designerId": "87786859-aab3-41d5-87d3-8519dc894094"
+        }
+    ]
+}

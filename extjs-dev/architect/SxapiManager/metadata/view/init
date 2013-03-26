@@ -1,0 +1,19 @@
+{
+    "type": "viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "init",
+        "designer|initialView": true,
+        "html": null,
+        "id": "init"
+    },
+    "configAlternates": {
+        "html": "string"
+    },
+    "id": "ExtBox1-ext-gen48948",
+    "designerId": "8d36c7de-0260-49a5-ab81-6ff39b8f7b13"
+}

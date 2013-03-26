@@ -1,0 +1,63 @@
+@-webkit-keyframes loaderSpinner {
+    0% {  -webkit-transform: scale(0.9); opacity:0.1; }
+50%   {  -webkit-transform: scale(1); opacity:1; }
+100%   {  -webkit-transform: scale(0.9); opacity:0.1; }
+}
+
+@-moz-keyframes loaderSpinner {
+    0% { -moz-transform: rotateY(0deg)  scale(0.5);opacity:0;    }
+50%   { -webkit-transform: rotateY(-180deg)  scale(1);opacity:1; }
+100%   { -moz-transform: rotateY(-360deg) scale(0.5);opacity:0; }
+}
+
+#loadingAppImg {
+    -webkit-animation-name: loaderSpinner;
+    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-animation-name: loaderSpinner;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 1s;
+    -moz-transform-style: preserve-3d;
+}
+
+
+.icon-menu-api,
+.icon-menu-logs,
+.icon-menu-user,
+.icon-menu-session,
+.icon-menu-model,
+.icon-menu-ressource,
+.icon-menu-application,
+.icon-menu-opportunity {
+    background-image: url('images/menu/all.png');
+}
+
+
+.icon-menu-api {
+    background-position: -20px -104px;
+}
+.icon-menu-logs {
+    background-position: -340px -468px;
+}
+.icon-menu-user {
+    background-position: -388px 0px;
+}
+.icon-menu-session {
+    background-position: -20px -468px;
+}
+.icon-menu-model {
+    background-position: -388px -157px;
+}
+.icon-menu-ressource {
+    background-position: -434px -157px;
+}
+.icon-menu-application {
+    background-position: -68px -234px;
+}
+
+.icon-menu-opportunity {
+    background-position: -20px -130px;
+}

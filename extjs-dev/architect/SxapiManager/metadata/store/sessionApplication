@@ -1,0 +1,91 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "sessionApplication",
+        "autoLoad": false,
+        "storeId": "sessionApplication"
+    },
+    "id": "ExtBox1-ext-gen52964",
+    "designerId": "dda2d684-8b2a-44a9-ac7d-1c9b9b484c8b",
+    "cn": [
+        {
+            "type": "ajaxproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyAjaxProxy",
+                "url": "http://127.0.0.1/git/startx_api/session/application?format=json"
+            },
+            "designerId": "f92d94ce-567d-481a-9dd4-f49de193c4fb",
+            "cn": [
+                {
+                    "type": "jsonreader",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyJsonReader",
+                        "idProperty": "_id",
+                        "messageProperty": "message",
+                        "root": "data",
+                        "successProperty": null,
+                        "totalProperty": null
+                    },
+                    "designerId": "450225a9-d92b-42c5-b8d2-74458d52666c"
+                }
+            ]
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field1",
+                "name": "_id",
+                "type": "string"
+            },
+            "designerId": "f6df92d9-00a0-4107-9f5b-833efe2cf0e4"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field2",
+                "name": "contact",
+                "type": "auto"
+            },
+            "designerId": "d044d2e9-0e38-4d37-8e2d-57269377bd9d"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field5",
+                "name": "desc",
+                "type": "int"
+            },
+            "designerId": "ff71fb16-ef9d-4ae7-b52c-a2435520556e"
+        }
+    ]
+}

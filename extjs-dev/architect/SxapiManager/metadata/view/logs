@@ -1,0 +1,325 @@
+{
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "logs",
+        "html": null,
+        "id": "logs",
+        "margin": null,
+        "padding": null,
+        "styleHtmlContent": null,
+        "layout": "border",
+        "bodyBorder": null,
+        "bodyPadding": null,
+        "closable": true,
+        "iconCls": "icon-menu-logs",
+        "title": "API Logs"
+    },
+    "configAlternates": {
+        "html": "string"
+    },
+    "id": "ExtBox1-ext-gen226296",
+    "designerId": "424400c2-40dd-4017-9ad3-59cfa93e6057",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "tabConfig",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dock": "top",
+                "designer|userClassName": "MyToolbar1"
+            },
+            "designerId": "751dde87-62ed-4a5d-9c4d-b8cc8b9dabc7",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton3",
+                        "id": "addbtn",
+                        "iconCls": "icon-add",
+                        "text": "Add"
+                    },
+                    "designerId": "0d4b6cde-0554-4664-90f6-fa08bfb09d6c"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton3",
+                        "id": "delbtn",
+                        "iconCls": "icon-delete",
+                        "text": "Delete"
+                    },
+                    "designerId": "ce1ce0e8-4c10-4903-b9ea-5235d15dfb7c"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton3",
+                        "id": "filterbtn",
+                        "iconCls": "icon-filter",
+                        "text": "Filter"
+                    },
+                    "designerId": "48112dd7-d33e-4585-9919-e71a45453819"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "designer|userClassName": "MyButton3",
+                        "id": "actionbtn",
+                        "iconCls": "icon-actions",
+                        "text": "Actions"
+                    },
+                    "designerId": "24a1d3cc-45b3-420f-986e-e7e467fe265d"
+                }
+            ]
+        },
+        {
+            "type": "gridpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "center",
+                "designer|userClassName": "MyGridPanel",
+                "border": null,
+                "id": "logs_grid",
+                "itemId": null,
+                "bodyBorder": null,
+                "title": null,
+                "store": "logs"
+            },
+            "designerId": "ecc03ebc-445a-4529-975e-8414ecf08ec6",
+            "cn": [
+                {
+                    "type": "gridview",
+                    "reference": {
+                        "name": "viewConfig",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyGridView"
+                    },
+                    "designerId": "47292e38-bc4a-419f-8541-4bf551aeae8d"
+                },
+                {
+                    "type": "pagingtoolbar",
+                    "reference": {
+                        "name": "dockedItems",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "plugin": null,
+                        "dock": "bottom",
+                        "designer|userClassName": "MyPagingToolbar",
+                        "width": 360,
+                        "displayInfo": true,
+                        "store": "logs"
+                    },
+                    "configAlternates": {
+                        "plugin": "object"
+                    },
+                    "designerId": "9c334d42-6658-4c15-a177-8c04fcbc80a6",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "plugin",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "gridroweditingplugin",
+                    "reference": {
+                        "name": "plugins",
+                        "type": "array"
+                    },
+                    "codeClass": "Ext.grid.plugin.RowEditing",
+                    "userConfig": {
+                        "designer|userClassName": "MyRowEditingPlugin",
+                        "triggerEvent": null,
+                        "clicksToMoveEditor": 1
+                    },
+                    "designerId": "83d0ee9f-4fa0-4798-8aa1-716823debbf0"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn",
+                        "dataIndex": "_id",
+                        "text": "_id"
+                    },
+                    "designerId": "2d6ee112-32da-4088-b3a2-6ed17adb5347"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn4",
+                        "dataIndex": "type",
+                        "text": "Type"
+                    },
+                    "designerId": "e0b6496b-c90a-4206-a62d-1ff862471839"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn5",
+                        "dataIndex": "message",
+                        "flex": 1,
+                        "text": "Message"
+                    },
+                    "designerId": "c8c89aa1-6d91-46d8-962b-bdf82e477c05"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn6",
+                        "dataIndex": "session",
+                        "text": "Session"
+                    },
+                    "designerId": "12cb6ec7-eacb-401a-a5c5-9183877acb96"
+                },
+                {
+                    "type": "datecolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyDateColumn",
+                        "dataIndex": "date",
+                        "text": "Date"
+                    },
+                    "designerId": "2067e8be-484e-4ef9-8328-c78ade70a771"
+                },
+                {
+                    "type": "numbercolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyNumberColumn",
+                        "dataIndex": "level",
+                        "text": "Level"
+                    },
+                    "designerId": "b1631e74-c4ce-4a82-ab12-a9298745fd11"
+                },
+                {
+                    "type": "numbercolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyNumberColumn1",
+                        "dataIndex": "code",
+                        "text": "Code"
+                    },
+                    "designerId": "86fcc583-38b1-43bd-867d-0e6a73946d17"
+                },
+                {
+                    "type": "gridcolumn",
+                    "reference": {
+                        "name": "columns",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyColumn7",
+                        "dataIndex": "ip",
+                        "text": "Ip"
+                    },
+                    "designerId": "46e3979f-b49f-46c6-a785-593b7b52627e"
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout|region": "south",
+                "designer|userClassName": "MyPanel3",
+                "height": 150,
+                "id": "logs_detail",
+                "styleHtmlContent": true,
+                "resizable": true,
+                "resizeHandles": "n",
+                "bodyPadding": 10,
+                "title": "Detail"
+            },
+            "configAlternates": {
+                "resizable": "boolean"
+            },
+            "designerId": "8edaad25-cc1e-4810-9b10-1d05d0d06e23"
+        }
+    ]
+}

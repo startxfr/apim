@@ -1,0 +1,55 @@
+{
+    "type": "datamodel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "SessionUser",
+        "idProperty": "_id"
+    },
+    "id": "ExtBox1-ext-gen59980",
+    "designerId": "297b6249-ce47-40f5-8174-5bb79292350d",
+    "cn": [
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field20",
+                "name": "_id"
+            },
+            "designerId": "a0f9f286-a656-45e0-9e2c-05bb116cd322"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field21",
+                "name": "name"
+            },
+            "designerId": "5d5de790-6d90-41f0-979a-1bdbc1688cc6"
+        },
+        {
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "field22",
+                "name": "mail"
+            },
+            "designerId": "b328e09f-e80d-4144-b7c0-bb628a057423"
+        }
+    ]
+}

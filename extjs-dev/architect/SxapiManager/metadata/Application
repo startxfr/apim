@@ -1,0 +1,131 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "views": [
+            "loading",
+            "init",
+            "main"
+        ],
+        "autoCreateViewport": true,
+        "name": "SxapiManager",
+        "controllers": [
+            "Session",
+            "Log"
+        ]
+    },
+    "id": "ExtBox1-ext-gen1773",
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "",
+                    "SxapiManagerloadingView = Ext.create('SxapiManager.view.loadingView');",
+                    "SxapiManagerloadingView.show();",
+                    "Ext.getCmp('loadingmessagebox').update('... initialisation ...');",
+                    "// on test l'existence du store de session",
+                    "console.log(Ext.getStore('sessionStore'));",
+                    "if(!Ext.getStore('sessionStore'))",
+                    "    Ext.create('SxapiManager.store.sessionStore');",
+                    "console.log(Ext.getStore('sessionStore'));",
+                    "// on charge la session",
+                    "Ext.getStore('sessionStore').load({",
+                    "    callback: this.onLoadSessionStore,",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "designerId": "50070977-4628-4f72-a3f1-c0883530f875"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onLoadSessionStore",
+                "fn": "onLoadSessionStore",
+                "designer|params": [
+                    "records",
+                    "operation",
+                    "success"
+                ],
+                "implHandler": [
+                    "if(success) {",
+                    "    Ext.Msg.alert('OK', \"OK pour le serveur\");",
+                    "}",
+                    "else {",
+                    "    Ext.Msg.alert('Error', \"Erreur de communication avec le serveur\");",
+                    "}",
+                    "if(success) {",
+                    "    var response = operation.response;",
+                    "    if(response.code !== undefined && response.code !== '' && response.code != 'ok') {",
+                    "        Ext.Msg.alert('Error', \"Erreur de réponse du serveur<br/>\"+response.message);",
+                    "    }",
+                    "    else {",
+                    "        var sessinfo = records[0].getData();",
+                    "        // on test l'existence du store de user",
+                    "        if(!Ext.getStore('userStore'))",
+                    "        Ext.create('Startx.store.userStore');",
+                    "        if(sessinfo.dend > new Date()) {",
+                    "            Ext.getCmp('loadingmessagebox').update(\"... session \"+sessinfo.id+\" ouverte ...\");",
+                    "            Ext.getStore('userStore').load({",
+                    "                callback: this.onLoadUserStore,",
+                    "                scope: this",
+                    "            });",
+                    "        }",
+                    "        else {",
+                    "            Ext.getCmp('loadingmessagebox').update(\"... session périmée ...\");",
+                    "            goapp = this;",
+                    "            Startx.wsd.Session.SessionLogout(function(provider, response) {",
+                    "                if(response.code == 'ok'){",
+                    "                    Ext.getCmp('loadingmessagebox').update('... session cloturée ...');",
+                    "                    Ext.getStore('sessionStore').load({",
+                    "                        callback: function(records, operation,success) {",
+                    "                            if(success) {",
+                    "                                Ext.getCmp('loadingmessagebox').update('... session renouvellée ...');",
+                    "                                Ext.getStore('userStore').load({",
+                    "                                    callback: goapp.onLoadUserStore,",
+                    "                                    scope: goapp",
+                    "                                });",
+                    "                            }",
+                    "                            else {",
+                    "                                Ext.Msg.alert('Error', \"Erreur de communication avec le serveur\");",
+                    "                            }",
+                    "",
+                    "                        },",
+                    "                        scope: this",
+                    "                    });",
+                    "                }",
+                    "                else {",
+                    "                    Ext.Msg.alert('Error', response.message);",
+                    "                }",
+                    "            });",
+                    "        }",
+                    "    }",
+                    "}",
+                    "else {",
+                    "    Ext.Msg.alert('Error', \"Erreur de communication avec le serveur\");",
+                    "}",
+                    ""
+                ]
+            },
+            "designerId": "d9f0f41c-258a-45ad-b5e6-b3a1a11e9b4c"
+        }
+    ]
+}
