@@ -412,6 +412,7 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "Ext.grid.RowEditor": [],
   "Ext.grid.RowEditorButtons": [],
+  "Ext.grid.Scroller": [],
   "Ext.grid.View": [],
   "Ext.grid.ViewDropZone": [],
   "Ext.grid.column.Action": [
@@ -1270,6 +1271,7 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.grid.RowEditorButtons": [
     "widget.roweditorbuttons"
   ],
+  "Ext.grid.Scroller": [],
   "Ext.grid.View": [
     "widget.gridview"
   ],
@@ -1830,7 +1832,6 @@ Ext.ClassManager.addNameAliasMappings({
 });
 Ext.setVersion("ext-theme-base", "4.2.1");
 Ext.setVersion("ext-theme-classic", "4.2.1");
-Ext.setVersion("ext-theme-gray", "4.2.1");
 Ext.setVersion("ext-theme-neutral", "4.2.1");
 /**
  * Sencha Blink - Development

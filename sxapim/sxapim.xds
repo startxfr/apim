@@ -15,14 +15,18 @@
             }
         },
         "urlPrefix": "",
-        "exportPath": "",
+        "exportPath": "C:/Users/chris/Documents/NetBeansProjects/sxapi-m/sxapim-test",
         "spacesToIndent": 4,
         "sdkPath": "",
         "lineEnding": "CRLF",
         "genTimestamps": false,
         "cacheBust": false,
         "buildShouldOverwriteIndex": true,
-        "generateArchitectVersion": true
+        "generateArchitectVersion": true,
+        "lastBuildSelection": {
+            "value": "webBuild",
+            "display": "Build web app"
+        }
     },
     "xdsVersion": "3.0.0",
     "xdsBuild": 1337,
