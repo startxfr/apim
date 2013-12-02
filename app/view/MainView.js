@@ -27,11 +27,28 @@ Ext.define('sxapim.view.MainView', {
         Ext.applyIf(me, {
             items: [
                 {
+                    xtype: 'container',
+                    region: 'north',
+                    height: 50,
+                    html: '<h1>SXAPIM</h1>',
+                    itemId: 'topPanel',
+                    layout: {
+                        align: 'center',
+                        pack: 'center',
+                        type: 'vbox'
+                    }
+                },
+                {
                     xtype: 'panel',
+                    flex: 1,
                     region: 'west',
                     split: true,
+                    frame: true,
                     itemId: 'menuPanel',
                     width: 150,
+                    collapseDirection: 'left',
+                    collapsed: false,
+                    collapsible: true,
                     title: 'Menu',
                     items: [
                         {
@@ -64,12 +81,10 @@ Ext.define('sxapim.view.MainView', {
                     ]
                 },
                 {
-                    xtype: 'panel',
+                    xtype: 'tabpanel',
+                    flex: 3,
                     region: 'center',
                     itemId: 'contentPanel',
-                    layout: {
-                        type: 'card'
-                    },
                     items: [
                         {
                             xtype: 'panel',
@@ -85,7 +100,11 @@ Ext.define('sxapim.view.MainView', {
                                     xtype: 'label',
                                     text: 'Home View'
                                 }
-                            ]
+                            ],
+                            tabConfig: {
+                                xtype: 'tab',
+                                flex: 1
+                            }
                         },
                         {
                             xtype: 'panel',
@@ -101,7 +120,11 @@ Ext.define('sxapim.view.MainView', {
                                     xtype: 'label',
                                     text: 'About Us View'
                                 }
-                            ]
+                            ],
+                            tabConfig: {
+                                xtype: 'tab',
+                                flex: 1
+                            }
                         },
                         {
                             xtype: 'panel',
@@ -117,7 +140,11 @@ Ext.define('sxapim.view.MainView', {
                                     xtype: 'label',
                                     text: 'Contact Us View'
                                 }
-                            ]
+                            ],
+                            tabConfig: {
+                                xtype: 'tab',
+                                flex: 1
+                            }
                         }
                     ]
                 }

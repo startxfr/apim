@@ -70,22 +70,22 @@ Ext.define('sxapim.controller.Navigation', {
 
         // Set menu and page title
         // Iterate through each menu item
-        this.getMenu().items.each(function(item) {
+        if(this.getMenu().items) {
+            this.getMenu().items.each(function(item) {
+                // Active
+                if (item.href == '#' + id) {
+                    // Disable
+                    item.disable();
+                    // Set page title to menu item text
+                    window.document.title = item.text;
+                }
 
-            // Active
-            if (item.href == '#' + id) {
-                // Disable
-                item.disable();
-                // Set page title to menu item text
-                window.document.title = item.text;
-            }
-
-            // Inactive
-            else {
-                item.enable();
-            }
-
-        });
+                // Inactive
+                else {
+                    item.enable();
+                }
+            });
+        }
 
     }
 
