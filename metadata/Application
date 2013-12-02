@@ -1,0 +1,18 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Navigation"
+        ],
+        "name": "sxapim",
+        "views": [
+            "MainView"
+        ]
+    },
+    "designerId": "application"
+}
