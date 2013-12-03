@@ -36,10 +36,10 @@ Ext.define('sxapim.view.UsersPanel', {
             items: [
                 {
                     xtype: 'gridpanel',
-                    flex: 2,
+                    flex: 3,
                     region: 'center',
                     id: '',
-                    itemId: 'UsersGridPanel',
+                    itemId: 'usersgrid',
                     store: 'UsersStore',
                     viewConfig: {
                         itemId: 'UserGridView'
@@ -72,23 +72,57 @@ Ext.define('sxapim.view.UsersPanel', {
                             defaultWidth: 50,
                             dataIndex: 'pin',
                             text: 'Pin'
-                        },
+                        }
+                    ]
+                },
+                {
+                    xtype: 'panel',
+                    region: 'east',
+                    itemId: 'usersgraph',
+                    width: 300,
+                    closable: true,
+                    collapsible: true,
+                    title: 'Graphic',
+                    titleCollapse: true,
+                    dockedItems: [
                         {
-                            xtype: 'actioncolumn',
-                            itemId: 'usergridactioncolumn',
-                            defaultWidth: 20,
-                            dataIndex: 'pin',
-                            emptyCellText: 'Action',
-                            menuText: 'Action',
-                            altText: 'Action',
-                            items: [
+                            xtype: 'chart',
+                            dock: 'right',
+                            width: 300,
+                            autoSize: true,
+                            animate: true,
+                            store: 'UsersStore',
+                            theme: 'Blue',
+                            axes: [
                                 {
-                                    handler: function(view, rowIndex, colIndex, item, e, record, row) {
-                                        console.log(record);
+                                    type: 'Category',
+                                    fields: [
+                                        'firstname'
+                                    ],
+                                    position: 'right'
+                                },
+                                {
+                                    type: 'Numeric',
+                                    fields: [
+                                        'visitcounter'
+                                    ],
+                                    position: 'top',
+                                    decimals: 0,
+                                    minimum: 0
+                                }
+                            ],
+                            series: [
+                                {
+                                    type: 'bar',
+                                    label: {
+                                        display: 'insideEnd',
+                                        field: 'visitcounter',
+                                        color: '#fff',
+                                        'text-anchor': 'middle'
                                     },
-                                    altText: 'Open',
-                                    icon: 'resources/images/test.gif',
-                                    tooltip: 'Open in new tab'
+                                    xField: 'firstname',
+                                    yField: 'visitcounter',
+                                    stacked: false
                                 }
                             ]
                         }
@@ -96,68 +130,23 @@ Ext.define('sxapim.view.UsersPanel', {
                 },
                 {
                     xtype: 'panel',
-                    flex: 1,
-                    region: 'east',
-                    itemId: 'UsersAdditionalPanel',
+                    flex: 2,
+                    region: 'south',
+                    split: true,
+                    itemId: 'userDetail',
                     layout: {
-                        type: 'accordion'
+                        type: 'fit'
                     },
+                    animCollapse: true,
+                    closable: true,
                     collapsible: true,
-                    title: 'Additionals',
+                    glyph: '117@Pictos',
+                    title: 'user\'s detail',
+                    titleCollapse: true,
                     items: [
                         {
-                            xtype: 'panel',
-                            title: 'Detail'
-                        },
-                        {
-                            xtype: 'panel',
-                            title: 'Graphics',
-                            dockedItems: [
-                                {
-                                    xtype: 'chart',
-                                    dock: 'left',
-                                    width: 200,
-                                    shadow: false,
-                                    autoSize: true,
-                                    animate: true,
-                                    insetPadding: 0,
-                                    store: 'UsersStore',
-                                    theme: 'Red',
-                                    axes: [
-                                        {
-                                            type: 'Category',
-                                            fields: [
-                                                'firstname'
-                                            ],
-                                            position: 'left'
-                                        },
-                                        {
-                                            type: 'Numeric',
-                                            fields: [
-                                                'visitcounter'
-                                            ],
-                                            position: 'top',
-                                            title: 'Visit',
-                                            decimals: 0,
-                                            minimum: 0
-                                        }
-                                    ],
-                                    series: [
-                                        {
-                                            type: 'bar',
-                                            label: {
-                                                display: 'insideEnd',
-                                                field: 'visitcounter',
-                                                color: '#fff',
-                                                'text-anchor': 'middle'
-                                            },
-                                            xField: 'firstname',
-                                            yField: 'visitcounter',
-                                            stacked: false
-                                        }
-                                    ]
-                                }
-                            ]
+                            xtype: 'container',
+                            html: '<p>Select a user in user\'s list</p>'
                         }
                     ]
                 }

@@ -49,6 +49,7 @@ Ext.define('sxapim.view.MainView', {
                     collapsed: false,
                     collapsible: true,
                     title: 'Menu',
+                    titleCollapse: true,
                     items: [
                         {
                             xtype: 'menu',
@@ -86,12 +87,39 @@ Ext.define('sxapim.view.MainView', {
                     itemId: 'mainPanel',
                     animCollapse: false,
                     closeAction: 'hide',
-                    collapsed: false
+                    collapsed: false,
+                    items: [
+                        {
+                            xtype: 'panel',
+                            autoScroll: true,
+                            closable: true,
+                            title: 'Glyph',
+                            listeners: {
+                                beforerender: {
+                                    fn: me.onHomePanelBeforeRender,
+                                    scope: me
+                                }
+                            }
+                        }
+                    ]
                 }
             ]
         });
 
         me.callParent(arguments);
+    },
+
+    onHomePanelBeforeRender: function(component, eOpts) {
+        var buttons = [];
+        for (var i = 33;i < 1416; i++) {
+            buttons.push({
+                xtype: "button",
+                text: i,
+                scale: 'medium',
+                glyph: i + '@Pictos'
+            });
+        }
+        component.add(buttons);
     }
 
 });

@@ -15,9 +15,10 @@
 
 Ext.define('sxapim.view.UserForm', {
     extend: 'Ext.form.Panel',
+    alias: 'widget.userform',
 
-    height: 250,
-    width: 400,
+    itemId: 'userForm',
+    autoScroll: true,
     bodyPadding: 10,
     title: 'User form',
 
@@ -30,22 +31,19 @@ Ext.define('sxapim.view.UserForm', {
                     xtype: 'displayfield',
                     anchor: '100%',
                     fieldLabel: 'ID',
-                    name: 'id',
-                    value: 'Display Field'
+                    name: 'id'
                 },
                 {
                     xtype: 'textfield',
                     anchor: '100%',
                     fieldLabel: 'Last name',
-                    name: 'lastname',
-                    value: 'Display Field'
+                    name: 'lastname'
                 },
                 {
                     xtype: 'textfield',
                     anchor: '100%',
                     fieldLabel: 'First name',
-                    name: 'firstname',
-                    value: 'Display Field'
+                    name: 'firstname'
                 },
                 {
                     xtype: 'fieldset',
@@ -55,15 +53,13 @@ Ext.define('sxapim.view.UserForm', {
                             xtype: 'displayfield',
                             anchor: '100%',
                             fieldLabel: 'Last visit',
-                            name: 'lastvisit',
-                            value: 'Display Field'
+                            name: 'lastvisit'
                         },
                         {
                             xtype: 'displayfield',
                             anchor: '100%',
                             fieldLabel: 'Visited',
-                            name: 'visitcounter',
-                            value: 'Display Field'
+                            name: 'visitcounter'
                         }
                     ]
                 }
@@ -72,6 +68,12 @@ Ext.define('sxapim.view.UserForm', {
                 {
                     xtype: 'toolbar',
                     dock: 'bottom',
+                    fixed: true,
+                    shadow: false,
+                    layout: {
+                        align: 'bottom',
+                        type: 'hbox'
+                    },
                     items: [
                         {
                             xtype: 'button',

@@ -52,6 +52,8 @@
                 "layout|region": "west",
                 "layout|split": true,
                 "title": "Menu",
+                "titleAlign": null,
+                "titleCollapse": true,
                 "width": null
             },
             "designerId": "70e4bdc2-8c21-4da3-b357-bdac73847e65",
@@ -153,7 +155,60 @@
                 "layout|weight": null,
                 "title": null
             },
-            "designerId": "c98c4f91-6f66-4054-8e31-2ccc2ab4f975"
+            "designerId": "c98c4f91-6f66-4054-8e31-2ccc2ab4f975",
+            "cn": [
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "closable": true,
+                        "title": "Glyph"
+                    },
+                    "designerId": "a612d05c-803a-4f2c-ad36-1a827f295793",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "aca0ac2f-71d7-4f16-8931-ad3cb87c81ec"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onHomePanelBeforeRender",
+                                "implHandler": [
+                                    "var buttons = [];\r",
+                                    "for (var i = 33;i < 1416; i++) {\r",
+                                    "    buttons.push({\r",
+                                    "        xtype: \"button\",\r",
+                                    "        text: i,\r",
+                                    "        scale: 'medium',\r",
+                                    "        glyph: i + '@Pictos'\r",
+                                    "    });\r",
+                                    "}\r",
+                                    "component.add(buttons);"
+                                ],
+                                "name": "beforerender",
+                                "scope": "me"
+                            },
+                            "designerId": "8ad74128-2ef6-4201-ae42-2232a747c171"
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

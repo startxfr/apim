@@ -17,5 +17,82 @@
             "UsersPanel"
         ]
     },
-    "designerId": "7a16fd53-0e7b-43af-a101-48506a3a4e3a"
+    "designerId": "7a16fd53-0e7b-43af-a101-48506a3a4e3a",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "userDetail",
+                "selector": "#userDetail"
+            },
+            "designerId": "0c998ff1-7e99-421f-862f-4664f3849c40"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "usersGrid",
+                "selector": "#usersgrid"
+            },
+            "designerId": "61d47470-9c91-4fc3-9f1c-d53112ee5fdc"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "#usersgrid",
+                "designer|targetType": "Ext.grid.Panel",
+                "fn": "onGridpanelItemClick",
+                "implHandler": [
+                    "console.log(\"item click\");\r",
+                    "// Get detail panel via controller ref\r",
+                    "var details = this.getUserDetail(),\r",
+                    "    data = record.data;\r",
+                    "var username = data.firstname+' '+data.lastname;\r",
+                    "\r",
+                    "if(details) {\r",
+                    "    // Create the user form panel with the selected row's data\r",
+                    "    var newform = Ext.create(\"sxapim.view.UserForm\",{\r",
+                    "        title: false\r",
+                    "    });\r",
+                    "    newform.getForm().loadRecord(record);\r",
+                    "    \r",
+                    "    // Add it to the detail view and update title\r",
+                    "    details.removeAll();\r",
+                    "    details.add(newform);\r",
+                    "    details.setTitle(\"Informations about user \"+username);\r",
+                    "}"
+                ],
+                "name": "itemclick",
+                "scope": "me"
+            },
+            "designerId": "9f53adb7-da50-48a7-b879-ec3abcb321b7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "usersPanel",
+                "selector": "#usersPanel"
+            },
+            "designerId": "72e04c9d-3b06-46cf-87a8-222201430ad9"
+        }
+    ]
 }

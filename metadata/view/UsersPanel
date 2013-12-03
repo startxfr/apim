@@ -23,8 +23,8 @@
             "codeClass": null,
             "userConfig": {
                 "id": "",
-                "itemId": "UsersGridPanel",
-                "layout|flex": 2,
+                "itemId": "usersgrid",
+                "layout|flex": 3,
                 "layout|region": "center",
                 "store": "UsersStore",
                 "title": null
@@ -111,64 +111,115 @@
                         "text": "Pin"
                     },
                     "designerId": "2de51fac-323d-44f6-8487-08b13a2b9e24"
-                },
+                }
+            ]
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "closable": true,
+                "collapsed": null,
+                "collapsible": true,
+                "itemId": "usersgraph",
+                "layout": null,
+                "layout|collapseMode": null,
+                "layout|flex": null,
+                "layout|region": "east",
+                "layout|split": null,
+                "maxWidth": null,
+                "minWidth": null,
+                "title": "Graphic",
+                "titleCollapse": true,
+                "width": 300
+            },
+            "designerId": "3256f14a-f57b-41d1-99c8-d583bfddb963",
+            "cn": [
                 {
-                    "type": "Ext.grid.column.Action",
+                    "type": "Ext.chart.Chart",
                     "reference": {
-                        "name": "columns",
+                        "name": "dockedItems",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "altText": "Action",
-                        "dataIndex": "pin",
-                        "defaultWidth": 20,
-                        "emptyCellText": "Action",
-                        "itemId": "usergridactioncolumn",
-                        "menuText": "Action"
+                        "animate": [
+                            "true"
+                        ],
+                        "autoSize": true,
+                        "dock": "right",
+                        "height": null,
+                        "insetPadding": null,
+                        "maxWidth": null,
+                        "minWidth": null,
+                        "shadow": null,
+                        "store": "UsersStore",
+                        "theme": "Blue",
+                        "width": 300
                     },
-                    "designerId": "5f950df4-12e3-42f8-b1e8-e5c431919b2d",
+                    "designerId": "ac4b807a-cac3-40d3-9866-880093ffb04d",
+                    "isBuiltIn": true,
+                    "iconCls": "icon-bar-chart",
+                    "autoName": "BarChart",
                     "cn": [
                         {
-                            "type": "actioncolumnitem",
+                            "type": "Ext.chart.axis.Category",
                             "reference": {
-                                "name": "items",
+                                "name": "axes",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "altText": "Open",
-                                "icon": "resources/images/test.gif",
-                                "iconCls": null,
-                                "tooltip": "Open in new tab"
+                                "fields": [
+                                    "firstname"
+                                ],
+                                "position": "right",
+                                "title": null,
+                                "width": null
                             },
-                            "designerId": "36994bd5-7a77-460c-b9f8-4ed0ec5e9338",
-                            "cn": [
-                                {
-                                    "type": "fixedfunction",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "designer|params": [
-                                            "view",
-                                            "rowIndex",
-                                            "colIndex",
-                                            "item",
-                                            "e",
-                                            "record",
-                                            "row"
-                                        ],
-                                        "fn": "handler",
-                                        "implHandler": [
-                                            "console.log(record);"
-                                        ]
-                                    },
-                                    "designerId": "a12447c0-7532-4878-a6f6-f7797b8fe0c6"
-                                }
-                            ]
+                            "designerId": "95a41fb0-2738-4d2b-913a-2275d8f675bb"
+                        },
+                        {
+                            "type": "Ext.chart.axis.Numeric",
+                            "reference": {
+                                "name": "axes",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "decimals": 0,
+                                "fields": [
+                                    "visitcounter"
+                                ],
+                                "maximum": null,
+                                "minimum": 0,
+                                "position": "top",
+                                "title": null
+                            },
+                            "designerId": "a5944bbe-5c3d-4a3e-9bae-fae0b57cbf1c"
+                        },
+                        {
+                            "type": "Ext.chart.series.Bar",
+                            "reference": {
+                                "name": "series",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": [
+                                    "{'display':'insideEnd','field':'visitcounter','color':'#fff','text-anchor':'middle'}"
+                                ],
+                                "stacked": false,
+                                "xField": "firstname",
+                                "yField": [
+                                    "visitcounter"
+                                ]
+                            },
+                            "designerId": "071a4536-7f66-4568-a520-a6ec3b3a70c1"
                         }
                     ]
                 }
@@ -182,129 +233,39 @@
             },
             "codeClass": null,
             "userConfig": {
+                "animCollapse": true,
+                "closable": true,
+                "collapseDirection": null,
                 "collapsed": null,
                 "collapsible": true,
-                "container|collapseFirst": null,
-                "container|hideCollapseTool": null,
-                "itemId": "UsersAdditionalPanel",
-                "layout": "accordion",
-                "layout|collapseMode": null,
-                "layout|flex": 1,
-                "layout|region": "east",
-                "title": "Additionals",
-                "titleCollapse": null,
-                "width": null
+                "data": null,
+                "frame": null,
+                "glyph": "117@Pictos",
+                "height": null,
+                "itemId": "userDetail",
+                "layout": "fit",
+                "layout|flex": 2,
+                "layout|region": "south",
+                "layout|split": true,
+                "title": "user's detail",
+                "titleCollapse": true
             },
-            "designerId": "3256f14a-f57b-41d1-99c8-d583bfddb963",
+            "designerId": "65e65713-a1f8-45cd-8156-e3c88a980b8a",
             "cn": [
                 {
-                    "type": "Ext.panel.Panel",
+                    "type": "Ext.container.Container",
                     "reference": {
                         "name": "items",
                         "type": "array"
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "collapsed": null,
-                        "title": "Detail"
+                        "html": "<p>Select a user in user's list</p>"
                     },
-                    "designerId": "65e65713-a1f8-45cd-8156-e3c88a980b8a"
-                },
-                {
-                    "type": "Ext.panel.Panel",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
+                    "configAlternates": {
+                        "html": "string"
                     },
-                    "codeClass": null,
-                    "userConfig": {
-                        "collapsed": null,
-                        "title": "Graphics"
-                    },
-                    "designerId": "b3115043-7394-43ff-9410-349e9484140b",
-                    "cn": [
-                        {
-                            "type": "Ext.chart.Chart",
-                            "reference": {
-                                "name": "dockedItems",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "animate": [
-                                    "true"
-                                ],
-                                "autoSize": true,
-                                "dock": "left",
-                                "height": null,
-                                "insetPadding": 0,
-                                "shadow": false,
-                                "store": "UsersStore",
-                                "theme": "Red",
-                                "width": 200
-                            },
-                            "designerId": "ac4b807a-cac3-40d3-9866-880093ffb04d",
-                            "isBuiltIn": true,
-                            "iconCls": "icon-bar-chart",
-                            "autoName": "BarChart",
-                            "cn": [
-                                {
-                                    "type": "Ext.chart.axis.Category",
-                                    "reference": {
-                                        "name": "axes",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "fields": [
-                                            "firstname"
-                                        ],
-                                        "position": "left",
-                                        "title": null
-                                    },
-                                    "designerId": "95a41fb0-2738-4d2b-913a-2275d8f675bb"
-                                },
-                                {
-                                    "type": "Ext.chart.axis.Numeric",
-                                    "reference": {
-                                        "name": "axes",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "decimals": 0,
-                                        "fields": [
-                                            "visitcounter"
-                                        ],
-                                        "maximum": null,
-                                        "minimum": 0,
-                                        "position": "top",
-                                        "title": "Visit"
-                                    },
-                                    "designerId": "a5944bbe-5c3d-4a3e-9bae-fae0b57cbf1c"
-                                },
-                                {
-                                    "type": "Ext.chart.series.Bar",
-                                    "reference": {
-                                        "name": "series",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "label": [
-                                            "{'display':'insideEnd','field':'visitcounter','color':'#fff','text-anchor':'middle'}"
-                                        ],
-                                        "stacked": false,
-                                        "xField": "firstname",
-                                        "yField": [
-                                            "visitcounter"
-                                        ]
-                                    },
-                                    "designerId": "071a4536-7f66-4568-a520-a6ec3b3a70c1"
-                                }
-                            ]
-                        }
-                    ]
+                    "designerId": "588c01a1-e032-4b3b-97ee-42fc1c867346"
                 }
             ]
         }
