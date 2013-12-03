@@ -13637,6 +13637,16 @@ textarea.x-form-empty-field {
   background-image: linear-gradient(top, #f9f9f9, #e3e4e6);
 }
 
+/* line 14, ../../../../ext/packages/ext-theme-neutral/sass/src/grid/header/Container.scss */
+.x-accordion-item .x-grid-header-ct {
+  border-width: 0 0 1px !important;
+}
+
+/* line 19, ../../../../ext/packages/ext-theme-neutral/sass/src/grid/header/Container.scss */
+.x-accordion-item .x-grid-header-ct-hidden {
+  border: 0 !important;
+}
+
 /* line 28, ../../../../ext/packages/ext-theme-neutral/sass/src/grid/header/Container.scss */
 .x-grid-body {
   border-top-color: #c5c5c5;
@@ -13790,6 +13800,68 @@ textarea.x-form-empty-field {
 /* line 43, ../../../../ext/packages/ext-theme-neutral/sass/src/grid/locking/Lockable.scss */
 .x-hmenu-unlock .x-menu-item-icon {
   background-image: url(images/grid/hmenu-unlock.gif);
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-layout-ct {
+  background-color: white;
+  padding: 0;
+}
+
+/* line 6, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-hd .x-panel-header-text-container {
+  color: black;
+  font-weight: normal;
+  font-family: tahoma, arial, verdana, sans-serif;
+  text-transform: none;
+}
+
+/* line 13, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-item {
+  margin: 0;
+}
+/* line 16, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-item .x-accordion-hd {
+  background: #e5e5e5;
+  border-top-color: #ececec;
+  padding: 4px 5px 5px 5px;
+}
+/* line 22, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-item .x-accordion-hd-sibling-expanded {
+  border-top-color: #d0d0d0;
+}
+/* line 26, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-item .x-accordion-hd-last-collapsed {
+  border-bottom-color: #e5e5e5;
+}
+/* line 30, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-item .x-accordion-body {
+  border-width: 0;
+}
+
+/* line 37, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-hd .x-tool-collapse-top,
+.x-accordion-hd .x-tool-collapse-bottom {
+  background-position: 0 -255px;
+}
+/* line 42, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-hd .x-tool-expand-top,
+.x-accordion-hd .x-tool-expand-bottom {
+  background-position: 0 -240px;
+}
+/* line 50, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-hd .x-tool-over .x-tool-collapse-top,
+.x-accordion-hd .x-tool-over .x-tool-collapse-bottom {
+  background-position: -15px -255px;
+}
+/* line 55, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-hd .x-tool-over .x-tool-expand-top,
+.x-accordion-hd .x-tool-over .x-tool-expand-bottom {
+  background-position: -15px -240px;
+}
+/* line 61, ../../../../ext/packages/ext-theme-neutral/sass/src/layout/container/Accordion.scss */
+.x-accordion-hd .x-tool-img {
+  background-color: #e5e5e5;
 }
 
 /* line 1, ../../../../ext/packages/ext-theme-neutral/sass/src/resizer/Splitter.scss */
@@ -16819,6 +16891,21 @@ body.x-nbr .x-tab-default-right-frameInfo {
 .x-column-header-trigger {
   background-color: #c5c5c5;
   background-image: url(images/grid/grid3-hd-btn.gif);
+}
+
+/* line 1, ../../../../ext/packages/ext-theme-classic/sass/src/layout/container/Accordion.scss */
+.x-accordion-hd {
+  border-width: 1px 0 !important;
+  -webkit-box-shadow: inset 0 0 0 0 #e5e5e5;
+  -moz-box-shadow: inset 0 0 0 0 #e5e5e5;
+  box-shadow: inset 0 0 0 0 #e5e5e5;
+}
+
+/* line 6, ../../../../ext/packages/ext-theme-classic/sass/src/layout/container/Accordion.scss */
+.x-accordion-hd-sibling-expanded {
+  -webkit-box-shadow: inset 0 1px 0 0 #ececec;
+  -moz-box-shadow: inset 0 1px 0 0 #ececec;
+  box-shadow: inset 0 1px 0 0 #ececec;
 }
 
 /* line 5, ../../../../ext/packages/ext-theme-classic/sass/src/resizer/Resizer.scss */

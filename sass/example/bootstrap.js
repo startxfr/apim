@@ -834,6 +834,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "sxapim.controller.User": [],
   "sxapim.model.UserModel": [],
   "sxapim.store.UsersStore": [],
+  "sxapim.view.HelpPanel": [],
   "sxapim.view.HomePanel": [],
   "sxapim.view.Main": [],
   "sxapim.view.MainView": [],
@@ -1833,6 +1834,7 @@ Ext.ClassManager.addNameAliasMappings({
   "sxapim.controller.User": [],
   "sxapim.model.UserModel": [],
   "sxapim.store.UsersStore": [],
+  "sxapim.view.HelpPanel": [],
   "sxapim.view.HomePanel": [],
   "sxapim.view.Main": [
     "widget.app-main"
