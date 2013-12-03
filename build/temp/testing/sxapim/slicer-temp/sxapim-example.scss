@@ -538,8 +538,13 @@ $include-ext-window-window: true;
 $include-sxapim-application: true;
 $include-sxapim-controller-main: true;
 $include-sxapim-controller-navigation: true;
+$include-sxapim-controller-user: true;
+$include-sxapim-model-usermodel: true;
+$include-sxapim-store-usersstore: true;
+$include-sxapim-view-homepanel: true;
 $include-sxapim-view-main: true;
 $include-sxapim-view-mainview: true;
+$include-sxapim-view-userform: true;
 $include-sxapim-view-userspanel: true;
 $include-sxapim-view-viewport: true;
 /* including package ext-theme-base */
