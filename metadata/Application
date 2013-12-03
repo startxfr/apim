@@ -10,12 +10,7 @@
             "Navigation",
             "User"
         ],
-        "name": "sxapim",
-        "views": [
-            "MainView",
-            "UserForm",
-            "HomePanel"
-        ]
+        "name": "sxapim"
     },
     "designerId": "application"
 }

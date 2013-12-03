@@ -21,6 +21,7 @@ Ext.define('sxapim.view.HomePanel', {
     bodyBorder: false,
     bodyPadding: 10,
     closable: true,
+    glyph: '72@Pictos',
     title: 'Home',
 
     initComponent: function() {

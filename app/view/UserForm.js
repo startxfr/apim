@@ -20,6 +20,7 @@ Ext.define('sxapim.view.UserForm', {
     itemId: 'userForm',
     autoScroll: true,
     bodyPadding: 10,
+    glyph: '220@Sosa',
     title: 'User form',
 
     initComponent: function() {
@@ -77,6 +78,7 @@ Ext.define('sxapim.view.UserForm', {
                     items: [
                         {
                             xtype: 'button',
+                            glyph: '97@Sosa',
                             text: 'Enregistrer'
                         }
                     ]

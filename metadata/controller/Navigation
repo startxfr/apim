@@ -8,7 +8,9 @@
     "userConfig": {
         "designer|userClassName": "Navigation",
         "views": [
-            "HomePanel"
+            "HelpPanel",
+            "HomePanel",
+            "MainView"
         ]
     },
     "designerId": "02e19093-9c6b-4222-8b96-2632f82d7303",
@@ -86,6 +88,7 @@
                     "    Ext.each(main.layout.getLayoutItems(), function(panel, index) {\r",
                     "        if(panel.getItemId() == panelId) {\r",
                     "            tabFound = true;\r",
+                    "            main.layout.setActiveItem(panel);\r",
                     "        }\r",
                     "    });\r",
                     "\r",

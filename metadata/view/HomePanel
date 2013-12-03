@@ -11,6 +11,7 @@
         "bodyStyle": null,
         "closable": true,
         "designer|userClassName": "HomePanel",
+        "glyph": "72@Pictos",
         "html": "<h2>Welcome to SXAPI Manager</h2><p>This application is a backend to manage and monitor API exposed and processed by an SXAPI plateform. For more information about this project, see sxapi on gthub</p>",
         "itemId": "homePanel",
         "style": null,

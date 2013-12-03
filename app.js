@@ -20,11 +20,6 @@ Ext.Loader.setConfig({
 
 
 Ext.application({
-    views: [
-        'MainView',
-        'UserForm',
-        'HomePanel'
-    ],
     controllers: [
         'Navigation',
         'User'

@@ -27,6 +27,7 @@ Ext.define('sxapim.view.UsersPanel', {
         type: 'border'
     },
     closable: true,
+    glyph: '225@Sosa',
     title: 'User\'s list',
 
     initComponent: function() {
@@ -82,6 +83,7 @@ Ext.define('sxapim.view.UsersPanel', {
                     width: 300,
                     closable: true,
                     collapsible: true,
+                    glyph: '70@Sosa',
                     title: 'Graphic',
                     titleCollapse: true,
                     dockedItems: [
@@ -140,7 +142,7 @@ Ext.define('sxapim.view.UsersPanel', {
                     animCollapse: true,
                     closable: true,
                     collapsible: true,
-                    glyph: '117@Pictos',
+                    glyph: '220@Sosa',
                     title: 'user\'s detail',
                     titleCollapse: true,
                     items: [

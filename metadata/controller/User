@@ -14,7 +14,8 @@
             "UsersStore"
         ],
         "views": [
-            "UsersPanel"
+            "UsersPanel",
+            "UserForm"
         ]
     },
     "designerId": "7a16fd53-0e7b-43af-a101-48506a3a4e3a",

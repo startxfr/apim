@@ -48,6 +48,7 @@ Ext.define('sxapim.view.MainView', {
                     collapseDirection: 'left',
                     collapsed: false,
                     collapsible: true,
+                    glyph: '61@Pictos',
                     title: 'Menu',
                     titleCollapse: true,
                     items: [
@@ -59,22 +60,20 @@ Ext.define('sxapim.view.MainView', {
                                 {
                                     xtype: 'menuitem',
                                     itemId: 'home',
+                                    glyph: '72@Pictos',
                                     text: 'Home'
                                 },
                                 {
                                     xtype: 'menuitem',
                                     itemId: 'users',
+                                    glyph: '225@Sosa',
                                     text: 'Users'
                                 },
                                 {
                                     xtype: 'menuitem',
-                                    itemId: 'about',
-                                    text: 'About Us'
-                                },
-                                {
-                                    xtype: 'menuitem',
-                                    itemId: 'contact',
-                                    text: 'Contact us'
+                                    itemId: 'help',
+                                    glyph: '63@Sosa',
+                                    text: 'Help'
                                 }
                             ]
                         }
@@ -87,13 +86,13 @@ Ext.define('sxapim.view.MainView', {
                     itemId: 'mainPanel',
                     animCollapse: false,
                     closeAction: 'hide',
-                    collapsed: false,
                     items: [
                         {
                             xtype: 'panel',
                             autoScroll: true,
                             closable: true,
-                            title: 'Pictos glyphs examples',
+                            glyph: '97@Sosa',
+                            title: 'Pictos glyphs',
                             listeners: {
                                 beforerender: {
                                     fn: me.onGlyphPictosPanelBeforeRender,
@@ -105,7 +104,8 @@ Ext.define('sxapim.view.MainView', {
                             xtype: 'panel',
                             autoScroll: true,
                             closable: true,
-                            title: 'Sosa glyphs examples',
+                            glyph: '97@Sosa',
+                            title: 'Sosa glyphs',
                             listeners: {
                                 beforerender: {
                                     fn: me.onGlyphSosaPanelBeforeRender,
@@ -123,7 +123,7 @@ Ext.define('sxapim.view.MainView', {
 
     onGlyphPictosPanelBeforeRender: function(component, eOpts) {
         var buttons = [];
-        for (var i = 33;i < 1416; i++) {
+        for (var i = 1;i < 500; i++) {
             buttons.push({
                 xtype: "button",
                 text: i,
@@ -136,7 +136,7 @@ Ext.define('sxapim.view.MainView', {
 
     onGlyphSosaPanelBeforeRender: function(component, eOpts) {
         var buttons = [];
-        for (var i = 33;i < 1416; i++) {
+        for (var i = 1;i < 500; i++) {
             buttons.push({
                 xtype: "button",
                 text: i,

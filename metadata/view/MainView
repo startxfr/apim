@@ -46,7 +46,7 @@
                 "collapsed": false,
                 "collapsible": true,
                 "frame": true,
-                "glyph": null,
+                "glyph": "61@Pictos",
                 "itemId": "menuPanel",
                 "layout|flex": 1,
                 "layout|region": "west",
@@ -80,6 +80,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "glyph": "72@Pictos",
                                 "href": null,
                                 "itemId": "home",
                                 "text": "Home"
@@ -94,6 +95,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "glyph": "225@Sosa",
                                 "href": null,
                                 "itemId": "users",
                                 "text": "Users"
@@ -108,25 +110,12 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "glyph": "63@Sosa",
                                 "href": null,
-                                "itemId": "about",
-                                "text": "About Us"
+                                "itemId": "help",
+                                "text": "Help"
                             },
                             "designerId": "a9c5c2c5-e485-4719-a39d-1f3df3d72393"
-                        },
-                        {
-                            "type": "Ext.menu.Item",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "href": null,
-                                "itemId": "contact",
-                                "text": "Contact us"
-                            },
-                            "designerId": "9f67ea74-e63c-4b04-b4c2-4130f7cbd1f8"
                         }
                     ]
                 }
@@ -142,8 +131,11 @@
             "userConfig": {
                 "animCollapse": false,
                 "closeAction": "hide",
-                "collapsed": false,
+                "collapsed": null,
                 "draggable": null,
+                "fixed": null,
+                "header": null,
+                "hideCollapseTool": null,
                 "icon": null,
                 "iconCls": null,
                 "itemId": "mainPanel",
@@ -153,7 +145,13 @@
                 "layout|region": "center",
                 "layout|split": null,
                 "layout|weight": null,
+                "overlapHeader": null,
+                "resizable": null,
+                "simpleDrag": null,
                 "title": null
+            },
+            "configAlternates": {
+                "resizable": "boolean"
             },
             "designerId": "c98c4f91-6f66-4054-8e31-2ccc2ab4f975",
             "cn": [
@@ -167,7 +165,9 @@
                     "userConfig": {
                         "autoScroll": true,
                         "closable": true,
-                        "title": "Pictos glyphs examples"
+                        "glyph": "97@Sosa",
+                        "simpleDrag": null,
+                        "title": "Pictos glyphs"
                     },
                     "designerId": "a612d05c-803a-4f2c-ad36-1a827f295793",
                     "cn": [
@@ -191,7 +191,7 @@
                                 "fn": "onGlyphPictosPanelBeforeRender",
                                 "implHandler": [
                                     "var buttons = [];\r",
-                                    "for (var i = 33;i < 1416; i++) {\r",
+                                    "for (var i = 1;i < 500; i++) {\r",
                                     "    buttons.push({\r",
                                     "        xtype: \"button\",\r",
                                     "        text: i,\r",
@@ -218,7 +218,8 @@
                     "userConfig": {
                         "autoScroll": true,
                         "closable": true,
-                        "title": "Sosa glyphs examples"
+                        "glyph": "97@Sosa",
+                        "title": "Sosa glyphs"
                     },
                     "designerId": "d3291de5-197e-4cfd-8f7f-868400e300ae",
                     "cn": [
@@ -242,7 +243,7 @@
                                 "fn": "onGlyphSosaPanelBeforeRender",
                                 "implHandler": [
                                     "var buttons = [];\r",
-                                    "for (var i = 33;i < 1416; i++) {\r",
+                                    "for (var i = 1;i < 500; i++) {\r",
                                     "    buttons.push({\r",
                                     "        xtype: \"button\",\r",
                                     "        text: i,\r",

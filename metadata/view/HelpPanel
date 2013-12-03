@@ -1,0 +1,85 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyBorder": false,
+        "bodyPadding": null,
+        "bodyStyle": null,
+        "closable": true,
+        "container|activeOnTop": null,
+        "container|animate": true,
+        "container|hideCollapseTool": false,
+        "container|sequence": true,
+        "defaults": [
+            "{\r",
+            "    bodyPadding: \"0 10\"\r",
+            "}"
+        ],
+        "designer|userClassName": "HelpPanel",
+        "glyph": "63@Sosa",
+        "html": "",
+        "itemId": "helpPanel",
+        "layout": "accordion",
+        "style": null,
+        "suspendLayout": null,
+        "title": "Help Center",
+        "width": null
+    },
+    "configAlternates": {
+        "html": "string",
+        "style": "string",
+        "bodyStyle": "string"
+    },
+    "designerId": "4d1b6f82-0330-4147-9cc7-656aafadfcad",
+    "cn": [
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<p>This application is a backend to manage and monitor API exposed and processed by an SXAPI plateform. For more information about this project, see sxapi on gthub</p>",
+                "title": "Introduction"
+            },
+            "configAlternates": {
+                "html": "string"
+            },
+            "designerId": "a4c825b0-00ce-4bf6-878b-7362125cfcbe"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<p>This application is a backend to manage and monitor API exposed and processed by an SXAPI plateform. For more information about this project, see sxapi on gthub</p>",
+                "title": "User management"
+            },
+            "configAlternates": {
+                "html": "string"
+            },
+            "designerId": "08653b4d-a239-4439-b611-44d609da34bb"
+        },
+        {
+            "type": "Ext.panel.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "bodyPadding": null,
+                "title": "Report a bug"
+            },
+            "designerId": "3191dccc-81af-425c-a23d-d52f59ad2a9f"
+        }
+    ]
+}

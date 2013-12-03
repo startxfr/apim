@@ -8,6 +8,7 @@
     "userConfig": {
         "closable": true,
         "designer|userClassName": "UsersPanel",
+        "glyph": "225@Sosa",
         "itemId": "usersPanel",
         "layout": "border",
         "title": "User's list"
@@ -125,6 +126,7 @@
                 "closable": true,
                 "collapsed": null,
                 "collapsible": true,
+                "glyph": "70@Sosa",
                 "itemId": "usersgraph",
                 "layout": null,
                 "layout|collapseMode": null,
@@ -240,7 +242,7 @@
                 "collapsible": true,
                 "data": null,
                 "frame": null,
-                "glyph": "117@Pictos",
+                "glyph": "220@Sosa",
                 "height": null,
                 "itemId": "userDetail",
                 "layout": "fit",

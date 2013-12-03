@@ -17,7 +17,9 @@ Ext.define('sxapim.controller.Navigation', {
     extend: 'Ext.app.Controller',
 
     views: [
-        'HomePanel'
+        'HelpPanel',
+        'HomePanel',
+        'MainView'
     ],
 
     refs: [
@@ -86,6 +88,7 @@ Ext.define('sxapim.controller.Navigation', {
             Ext.each(main.layout.getLayoutItems(), function(panel, index) {
                 if(panel.getItemId() == panelId) {
                     tabFound = true;
+                    main.layout.setActiveItem(panel);
                 }
             });
 

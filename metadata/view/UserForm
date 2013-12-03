@@ -10,6 +10,7 @@
         "bodyPadding": 10,
         "designer|userAlias": "userform",
         "designer|userClassName": "UserForm",
+        "glyph": "220@Sosa",
         "height": null,
         "itemId": "userForm",
         "title": "User form",
@@ -134,6 +135,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "glyph": "97@Sosa",
                         "layout|flex": null,
                         "text": "Enregistrer"
                     },

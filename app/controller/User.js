@@ -23,7 +23,8 @@ Ext.define('sxapim.controller.User', {
         'UsersStore'
     ],
     views: [
-        'UsersPanel'
+        'UsersPanel',
+        'UserForm'
     ],
 
     refs: [
