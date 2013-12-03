@@ -1,0 +1,27 @@
+{
+    "type": "Ext.panel.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyBorder": false,
+        "bodyPadding": 10,
+        "bodyStyle": null,
+        "closable": true,
+        "designer|userClassName": "HomePanel",
+        "html": "<h2>Welcome to SXAPI Manager</h2><p>This application is a backend to manage and monitor API exposed and processed by an SXAPI plateform. For more information about this project, see sxapi on gthub</p>",
+        "itemId": "homePanel",
+        "style": null,
+        "suspendLayout": null,
+        "title": "Home",
+        "width": null
+    },
+    "configAlternates": {
+        "html": "string",
+        "style": "string",
+        "bodyStyle": "string"
+    },
+    "designerId": "fd78c63b-087d-415c-9b9d-841dd8bd8596"
+}

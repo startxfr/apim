@@ -2,10 +2,14 @@
    "name": "sxapim",
    "requires": [],
    "id": "e3295f30-2e20-44c8-a108-325170846796",
-   "resources": [],
+   "resources": [
+      "resources/sxapim.css"
+   ],
    "_architect": {
       "_comment": "Please don't edit. This is Architect data.",
-      "resources": [],
+      "resources": [
+         "resources/sxapim.css"
+      ],
       "requires": []
    }
 }

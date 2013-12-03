@@ -1,0 +1,15 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css",
+        "remote": null,
+        "update": "delta",
+        "url": "resources/sxapim.css"
+    },
+    "designerId": "4787a35c-3b91-44f1-b939-87791dba77e1"
+}

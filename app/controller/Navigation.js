@@ -16,6 +16,10 @@
 Ext.define('sxapim.controller.Navigation', {
     extend: 'Ext.app.Controller',
 
+    views: [
+        'HomePanel'
+    ],
+
     refs: [
         {
             ref: 'mainPanel',
@@ -44,6 +48,8 @@ Ext.define('sxapim.controller.Navigation', {
 
         // Use var for controller
         var ctrl = this;
+
+        this.navigate('home');
 
         // Init the Ext history utility
         //Ext.History.init();

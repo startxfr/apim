@@ -138,8 +138,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "activeTab": 0,
                 "animCollapse": false,
+                "closeAction": "hide",
                 "collapsed": false,
                 "draggable": null,
                 "icon": null,
@@ -153,49 +153,7 @@
                 "layout|weight": null,
                 "title": null
             },
-            "designerId": "c98c4f91-6f66-4054-8e31-2ccc2ab4f975",
-            "cn": [
-                {
-                    "type": "Ext.panel.Panel",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "bodyBorder": false,
-                        "bodyPadding": 10,
-                        "bodyStyle": null,
-                        "closable": true,
-                        "html": "<h2>Welcome to SXAPI Manager</h2><p>This application is a backend to manage and monitor API exposed and processed by an SXAPI plateform. For more information about this project, see sxapi on gthub</p>",
-                        "itemId": "homePanel",
-                        "style": null,
-                        "suspendLayout": null,
-                        "title": "Home",
-                        "width": null
-                    },
-                    "configAlternates": {
-                        "html": "string",
-                        "style": "string",
-                        "bodyStyle": "string"
-                    },
-                    "designerId": "6e0310e2-3829-40e2-acea-c3d80afea341",
-                    "cn": [
-                        {
-                            "type": "Ext.tab.Tab",
-                            "reference": {
-                                "name": "tabConfig",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "layout|flex": null
-                            },
-                            "designerId": "ba878e22-3b0d-4ec5-9942-acc36ef6ecf3"
-                        }
-                    ]
-                }
-            ]
+            "designerId": "c98c4f91-6f66-4054-8e31-2ccc2ab4f975"
         }
     ]
 }

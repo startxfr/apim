@@ -16,6 +16,12 @@
 Ext.define('sxapim.view.UsersPanel', {
     extend: 'Ext.panel.Panel',
 
+    requires: [
+        'Ext.chart.axis.Category',
+        'Ext.chart.axis.Numeric',
+        'Ext.chart.series.Bar'
+    ],
+
     itemId: 'usersPanel',
     layout: {
         type: 'border'
@@ -31,47 +37,127 @@ Ext.define('sxapim.view.UsersPanel', {
                 {
                     xtype: 'gridpanel',
                     flex: 2,
-                    region: 'north',
+                    region: 'center',
+                    id: '',
+                    itemId: 'UsersGridPanel',
+                    store: 'UsersStore',
+                    viewConfig: {
+                        itemId: 'UserGridView'
+                    },
                     columns: [
                         {
                             xtype: 'gridcolumn',
-                            dataIndex: 'string',
-                            text: 'String'
+                            defaultWidth: 50,
+                            dataIndex: 'id',
+                            text: 'Id'
                         },
                         {
-                            xtype: 'numbercolumn',
-                            dataIndex: 'number',
-                            text: 'Number'
+                            xtype: 'gridcolumn',
+                            dataIndex: 'firstname',
+                            text: 'Firstname'
                         },
                         {
-                            xtype: 'datecolumn',
-                            dataIndex: 'date',
-                            text: 'Date'
+                            xtype: 'gridcolumn',
+                            dataIndex: 'lastname',
+                            text: 'Lastname',
+                            flex: 1
                         },
                         {
-                            xtype: 'booleancolumn',
-                            dataIndex: 'bool',
-                            text: 'Boolean'
+                            xtype: 'gridcolumn',
+                            dataIndex: 'mail',
+                            text: 'Mail'
+                        },
+                        {
+                            xtype: 'gridcolumn',
+                            defaultWidth: 50,
+                            dataIndex: 'pin',
+                            text: 'Pin'
+                        },
+                        {
+                            xtype: 'actioncolumn',
+                            itemId: 'usergridactioncolumn',
+                            defaultWidth: 20,
+                            dataIndex: 'pin',
+                            emptyCellText: 'Action',
+                            menuText: 'Action',
+                            altText: 'Action',
+                            items: [
+                                {
+                                    handler: function(view, rowIndex, colIndex, item, e, record, row) {
+                                        console.log(record);
+                                    },
+                                    altText: 'Open',
+                                    icon: 'resources/images/test.gif',
+                                    tooltip: 'Open in new tab'
+                                }
+                            ]
                         }
                     ]
                 },
                 {
-                    xtype: 'tabpanel',
+                    xtype: 'panel',
                     flex: 1,
-                    region: 'south',
-                    activeTab: 0,
+                    region: 'east',
+                    itemId: 'UsersAdditionalPanel',
+                    layout: {
+                        type: 'accordion'
+                    },
+                    collapsible: true,
+                    title: 'Additionals',
                     items: [
                         {
                             xtype: 'panel',
-                            title: 'Tab 1'
+                            title: 'Detail'
                         },
                         {
                             xtype: 'panel',
-                            title: 'Tab 2'
-                        },
-                        {
-                            xtype: 'panel',
-                            title: 'Tab 3'
+                            title: 'Graphics',
+                            dockedItems: [
+                                {
+                                    xtype: 'chart',
+                                    dock: 'left',
+                                    width: 200,
+                                    shadow: false,
+                                    autoSize: true,
+                                    animate: true,
+                                    insetPadding: 0,
+                                    store: 'UsersStore',
+                                    theme: 'Red',
+                                    axes: [
+                                        {
+                                            type: 'Category',
+                                            fields: [
+                                                'firstname'
+                                            ],
+                                            position: 'left'
+                                        },
+                                        {
+                                            type: 'Numeric',
+                                            fields: [
+                                                'visitcounter'
+                                            ],
+                                            position: 'top',
+                                            title: 'Visit',
+                                            decimals: 0,
+                                            minimum: 0
+                                        }
+                                    ],
+                                    series: [
+                                        {
+                                            type: 'bar',
+                                            label: {
+                                                display: 'insideEnd',
+                                                field: 'visitcounter',
+                                                color: '#fff',
+                                                'text-anchor': 'middle'
+                                            },
+                                            xField: 'firstname',
+                                            yField: 'visitcounter',
+                                            stacked: false
+                                        }
+                                    ]
+                                }
+                            ]
                         }
                     ]
                 }

@@ -35,16 +35,24 @@
     "framework": "ext42",
     "viewOrderMap": {
         "view": [
+            "fd78c63b-087d-415c-9b9d-841dd8bd8596",
             "353f0c49-9162-4dc5-8e2d-ffb09f0d3a62",
-            "507f7932-4b45-4a13-b39f-e25ea7c9fd95"
+            "507f7932-4b45-4a13-b39f-e25ea7c9fd95",
+            "e048c0f1-f3d7-4af6-b494-ddf3a15b42ec"
         ],
-        "store": [],
+        "store": [
+            "5cff908c-0138-4a70-b515-1e435f22466c"
+        ],
         "controller": [
-            "02e19093-9c6b-4222-8b96-2632f82d7303"
+            "02e19093-9c6b-4222-8b96-2632f82d7303",
+            "7a16fd53-0e7b-43af-a101-48506a3a4e3a"
         ],
-        "model": [],
+        "model": [
+            "3e208151-4136-4a9e-a6d9-f854e9dacac4"
+        ],
         "resource": [
-            "efa3151d-f411-416b-a78d-276e3b22783a"
+            "efa3151d-f411-416b-a78d-276e3b22783a",
+            "4787a35c-3b91-44f1-b939-87791dba77e1"
         ],
         "app": [
             "application"

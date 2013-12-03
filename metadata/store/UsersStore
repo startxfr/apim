@@ -1,0 +1,58 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "autoSync": true,
+        "data": [
+            "[\r",
+            "    {\r",
+            "        id:1,\r",
+            "        firstname:\"Christophe\",\r",
+            "        lastname:\"LARUE\",\r",
+            "        pin:\"0000\",\r",
+            "        visitcounter:12,\r",
+            "        lastvisit:\"2013-01-01 15:19:12\"\r",
+            "    },\r",
+            "    {\r",
+            "        id:2,\r",
+            "        firstname:\"Maxime\",\r",
+            "        lastname:\"GAILLARD\",\r",
+            "        pin:\"1111\",\r",
+            "        visitcounter:5,\r",
+            "        lastvisit:\"2013-02-05 18:47:43\"\r",
+            "    }\r",
+            "]"
+        ],
+        "designer|userClassName": "UsersStore",
+        "model": "UserModel",
+        "storeId": "UsersStore"
+    },
+    "designerId": "5cff908c-0138-4a70-b515-1e435f22466c",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "dd5f8ad1-c034-4fe3-8138-3ad5bbbc9f1d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "8c13e5ef-8bbb-442f-950d-35f08bb329eb"
+                }
+            ]
+        }
+    ]
+}

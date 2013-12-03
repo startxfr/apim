@@ -833,6 +833,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "sxapim.controller.Navigation": [],
   "sxapim.view.Main": [],
   "sxapim.view.MainView": [],
+  "sxapim.view.UsersPanel": [],
   "sxapim.view.Viewport": []
 });
 Ext.ClassManager.addNameAliasMappings({
@@ -1828,6 +1829,7 @@ Ext.ClassManager.addNameAliasMappings({
     "widget.app-main"
   ],
   "sxapim.view.MainView": [],
+  "sxapim.view.UsersPanel": [],
   "sxapim.view.Viewport": []
 });
 Ext.setVersion("ext-theme-base", "4.2.1");

@@ -1,0 +1,147 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "bodyPadding": 10,
+        "designer|userClassName": "UserForm",
+        "height": 250,
+        "title": "User form",
+        "width": 400
+    },
+    "designerId": "e048c0f1-f3d7-4af6-b494-ddf3a15b42ec",
+    "cn": [
+        {
+            "type": "Ext.form.field.Display",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "ID",
+                "layout|anchor": "100%",
+                "name": "id",
+                "value": [
+                    "Display Field"
+                ]
+            },
+            "designerId": "23e45a37-efc3-44da-a095-97b265a228b4"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "Last name",
+                "layout|anchor": "100%",
+                "name": "lastname",
+                "value": [
+                    "Display Field"
+                ]
+            },
+            "designerId": "3a403fc3-a5c8-44c1-9912-918d49f17eea"
+        },
+        {
+            "type": "Ext.form.field.Text",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fieldLabel": "First name",
+                "layout|anchor": "100%",
+                "name": "firstname",
+                "value": [
+                    "Display Field"
+                ]
+            },
+            "designerId": "53d8f566-0ee7-427c-86fb-18842c9221b8"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Visits"
+            },
+            "designerId": "dbed14fe-1026-424b-b777-93d2c949ad2b",
+            "cn": [
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Last visit",
+                        "layout|anchor": "100%",
+                        "name": "lastvisit",
+                        "value": [
+                            "Display Field"
+                        ]
+                    },
+                    "designerId": "d6bb4202-a00d-4ed8-96eb-4ce8af8423c3"
+                },
+                {
+                    "type": "Ext.form.field.Display",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fieldLabel": "Visited",
+                        "layout|anchor": "100%",
+                        "name": "visitcounter",
+                        "value": [
+                            "Display Field"
+                        ]
+                    },
+                    "designerId": "0b6f7f96-35ea-4220-b57d-b94d20f9874f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.toolbar.Toolbar",
+            "reference": {
+                "name": "dockedItems",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": null,
+                "dock": "bottom",
+                "rtl": null,
+                "shadow": null
+            },
+            "designerId": "326f5dbd-8b89-4850-95ae-3138fab5e958",
+            "cn": [
+                {
+                    "type": "Ext.button.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout|flex": null,
+                        "text": "Enregistrer"
+                    },
+                    "designerId": "5430beed-11b2-4d48-ad26-49524f3febac"
+                }
+            ]
+        }
+    ]
+}

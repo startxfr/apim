@@ -22,10 +22,12 @@ Ext.Loader.setConfig({
 Ext.application({
     views: [
         'MainView',
-        'UsersPanel'
+        'UserForm',
+        'HomePanel'
     ],
     controllers: [
-        'Navigation'
+        'Navigation',
+        'User'
     ],
     name: 'sxapim',
 

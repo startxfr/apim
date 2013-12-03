@@ -7,12 +7,14 @@
     "codeClass": null,
     "userConfig": {
         "controllers": [
-            "Navigation"
+            "Navigation",
+            "User"
         ],
         "name": "sxapim",
         "views": [
             "MainView",
-            "UsersPanel"
+            "UserForm",
+            "HomePanel"
         ]
     },
     "designerId": "application"

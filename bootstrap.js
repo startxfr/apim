@@ -412,7 +412,6 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "Ext.grid.RowEditor": [],
   "Ext.grid.RowEditorButtons": [],
-  "Ext.grid.Scroller": [],
   "Ext.grid.View": [],
   "Ext.grid.ViewDropZone": [],
   "Ext.grid.column.Action": [
@@ -831,8 +830,14 @@ Ext.ClassManager.addNameAlternateMappings({
   "sxapim.Application": [],
   "sxapim.controller.Main": [],
   "sxapim.controller.Navigation": [],
+  "sxapim.controller.User": [],
+  "sxapim.model.UserModel": [],
+  "sxapim.store.UsersStore": [],
+  "sxapim.view.HomePanel": [],
   "sxapim.view.Main": [],
   "sxapim.view.MainView": [],
+  "sxapim.view.UserForm": [],
+  "sxapim.view.UsersPanel": [],
   "sxapim.view.Viewport": []
 });
 Ext.ClassManager.addNameAliasMappings({
@@ -1271,7 +1276,6 @@ Ext.ClassManager.addNameAliasMappings({
   "Ext.grid.RowEditorButtons": [
     "widget.roweditorbuttons"
   ],
-  "Ext.grid.Scroller": [],
   "Ext.grid.View": [
     "widget.gridview"
   ],
@@ -1824,10 +1828,16 @@ Ext.ClassManager.addNameAliasMappings({
   "sxapim.Application": [],
   "sxapim.controller.Main": [],
   "sxapim.controller.Navigation": [],
+  "sxapim.controller.User": [],
+  "sxapim.model.UserModel": [],
+  "sxapim.store.UsersStore": [],
+  "sxapim.view.HomePanel": [],
   "sxapim.view.Main": [
     "widget.app-main"
   ],
   "sxapim.view.MainView": [],
+  "sxapim.view.UserForm": [],
+  "sxapim.view.UsersPanel": [],
   "sxapim.view.Viewport": []
 });
 Ext.setVersion("ext-theme-base", "4.2.1");

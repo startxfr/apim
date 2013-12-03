@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Navigation"
+        "designer|userClassName": "Navigation",
+        "views": [
+            "HomePanel"
+        ]
     },
     "designerId": "02e19093-9c6b-4222-8b96-2632f82d7303",
     "cn": [
@@ -31,6 +34,8 @@
                     "\r",
                     "// Use var for controller\r",
                     "var ctrl = this;\r",
+                    "\r",
+                    "this.navigate('home');\r",
                     "\r",
                     "// Init the Ext history utility\r",
                     "//Ext.History.init();\r",
@@ -83,7 +88,7 @@
                     "            tabFound = true;\r",
                     "        }\r",
                     "    });\r",
-                    "    \r",
+                    "\r",
                     "    // add new tab if doesn't already exist\r",
                     "    if(!tabFound) {\r",
                     "        var classname = panelId.charAt(0).toUpperCase() + panelId.slice(1);\r",

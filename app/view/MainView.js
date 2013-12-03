@@ -85,19 +85,8 @@ Ext.define('sxapim.view.MainView', {
                     region: 'center',
                     itemId: 'mainPanel',
                     animCollapse: false,
-                    collapsed: false,
-                    activeTab: 0,
-                    items: [
-                        {
-                            xtype: 'panel',
-                            html: '<h2>Welcome to SXAPI Manager</h2><p>This application is a backend to manage and monitor API exposed and processed by an SXAPI plateform. For more information about this project, see sxapi on gthub</p>',
-                            itemId: 'homePanel',
-                            bodyBorder: false,
-                            bodyPadding: 10,
-                            closable: true,
-                            title: 'Home'
-                        }
-                    ]
+                    closeAction: 'hide',
+                    collapsed: false
                 }
             ]
         });
