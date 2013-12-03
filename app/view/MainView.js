@@ -93,10 +93,22 @@ Ext.define('sxapim.view.MainView', {
                             xtype: 'panel',
                             autoScroll: true,
                             closable: true,
-                            title: 'Glyph',
+                            title: 'Pictos glyphs examples',
                             listeners: {
                                 beforerender: {
-                                    fn: me.onHomePanelBeforeRender,
+                                    fn: me.onGlyphPictosPanelBeforeRender,
+                                    scope: me
+                                }
+                            }
+                        },
+                        {
+                            xtype: 'panel',
+                            autoScroll: true,
+                            closable: true,
+                            title: 'Sosa glyphs examples',
+                            listeners: {
+                                beforerender: {
+                                    fn: me.onGlyphSosaPanelBeforeRender,
                                     scope: me
                                 }
                             }
@@ -109,7 +121,7 @@ Ext.define('sxapim.view.MainView', {
         me.callParent(arguments);
     },
 
-    onHomePanelBeforeRender: function(component, eOpts) {
+    onGlyphPictosPanelBeforeRender: function(component, eOpts) {
         var buttons = [];
         for (var i = 33;i < 1416; i++) {
             buttons.push({
@@ -117,6 +129,19 @@ Ext.define('sxapim.view.MainView', {
                 text: i,
                 scale: 'medium',
                 glyph: i + '@Pictos'
+            });
+        }
+        component.add(buttons);
+    },
+
+    onGlyphSosaPanelBeforeRender: function(component, eOpts) {
+        var buttons = [];
+        for (var i = 33;i < 1416; i++) {
+            buttons.push({
+                xtype: "button",
+                text: i,
+                scale: 'medium',
+                glyph: i + '@Sosa'
             });
         }
         component.add(buttons);

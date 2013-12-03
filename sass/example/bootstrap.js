@@ -1838,7 +1838,9 @@ Ext.ClassManager.addNameAliasMappings({
     "widget.app-main"
   ],
   "sxapim.view.MainView": [],
-  "sxapim.view.UserForm": [],
+  "sxapim.view.UserForm": [
+    "widget.userform"
+  ],
   "sxapim.view.UsersPanel": [],
   "sxapim.view.Viewport": []
 });

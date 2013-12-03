@@ -1,7 +1,20 @@
 @font-face {
     font-family: 'Pictos';
     src: url("fonts/pictos/pictos.eot");
-    src: url("fonts/pictos/pictos.eot?#iefix") format("embedded-opentype"), url("fonts/pictos/pictos.woff") format("woff"), url("fonts/pictos/pictos.ttf") format("truetype");
+    src: url("fonts/pictos/pictos.eot?#iefix") format("embedded-opentype"), 
+         url("fonts/pictos/pictos.woff") format("woff"), 
+         url("fonts/pictos/pictos.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+  font-family: "Sosa";
+  src: url("fonts/sosa/sosa-regular-webfont.eot");
+  src: url("fonts/sosa/sosa-regular-webfont.eot?#iefix") format("embedded-opentype"),
+       url("fonts/sosa/sosa-regular-webfont.woff") format("woff"),
+       url("fonts/sosa/sosa-regular-webfont.ttf") format("truetype"),
+       url("fonts/sosa/sosa-regular-webfont.svg#fontcustom") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }

@@ -167,7 +167,7 @@
                     "userConfig": {
                         "autoScroll": true,
                         "closable": true,
-                        "title": "Glyph"
+                        "title": "Pictos glyphs examples"
                     },
                     "designerId": "a612d05c-803a-4f2c-ad36-1a827f295793",
                     "cn": [
@@ -188,7 +188,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "fn": "onHomePanelBeforeRender",
+                                "fn": "onGlyphPictosPanelBeforeRender",
                                 "implHandler": [
                                     "var buttons = [];\r",
                                     "for (var i = 33;i < 1416; i++) {\r",
@@ -205,6 +205,57 @@
                                 "scope": "me"
                             },
                             "designerId": "8ad74128-2ef6-4201-ae42-2232a747c171"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.panel.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoScroll": true,
+                        "closable": true,
+                        "title": "Sosa glyphs examples"
+                    },
+                    "designerId": "d3291de5-197e-4cfd-8f7f-868400e300ae",
+                    "cn": [
+                        {
+                            "type": "Ext.tab.Tab",
+                            "reference": {
+                                "name": "tabConfig",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "designerId": "98bc42e2-51aa-44f1-aa33-07f7c846bc47"
+                        },
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onGlyphSosaPanelBeforeRender",
+                                "implHandler": [
+                                    "var buttons = [];\r",
+                                    "for (var i = 33;i < 1416; i++) {\r",
+                                    "    buttons.push({\r",
+                                    "        xtype: \"button\",\r",
+                                    "        text: i,\r",
+                                    "        scale: 'medium',\r",
+                                    "        glyph: i + '@Sosa'\r",
+                                    "    });\r",
+                                    "}\r",
+                                    "component.add(buttons);"
+                                ],
+                                "name": "beforerender",
+                                "scope": "me"
+                            },
+                            "designerId": "df69d7ed-784b-4aad-b37a-05deb4ec2f76"
                         }
                     ]
                 }
