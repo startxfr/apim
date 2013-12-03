@@ -45,7 +45,6 @@ Ext.define('sxapim.view.MainView', {
                     split: true,
                     frame: true,
                     itemId: 'menuPanel',
-                    width: 150,
                     collapseDirection: 'left',
                     collapsed: false,
                     collapsible: true,
@@ -54,11 +53,17 @@ Ext.define('sxapim.view.MainView', {
                         {
                             xtype: 'menu',
                             floating: false,
+                            itemId: 'mainMenu',
                             items: [
                                 {
                                     xtype: 'menuitem',
                                     itemId: 'home',
                                     text: 'Home'
+                                },
+                                {
+                                    xtype: 'menuitem',
+                                    itemId: 'users',
+                                    text: 'Users'
                                 },
                                 {
                                     xtype: 'menuitem',
@@ -70,13 +75,7 @@ Ext.define('sxapim.view.MainView', {
                                     itemId: 'contact',
                                     text: 'Contact us'
                                 }
-                            ],
-                            listeners: {
-                                click: {
-                                    fn: me.onMenuClick,
-                                    scope: me
-                                }
-                            }
+                            ]
                         }
                     ]
                 },
@@ -84,67 +83,19 @@ Ext.define('sxapim.view.MainView', {
                     xtype: 'tabpanel',
                     flex: 3,
                     region: 'center',
-                    itemId: 'contentPanel',
+                    itemId: 'mainPanel',
+                    animCollapse: false,
+                    collapsed: false,
+                    activeTab: 0,
                     items: [
                         {
                             xtype: 'panel',
+                            html: '<h2>Welcome to SXAPI Manager</h2><p>This application is a backend to manage and monitor API exposed and processed by an SXAPI plateform. For more information about this project, see sxapi on gthub</p>',
                             itemId: 'homePanel',
-                            layout: {
-                                align: 'center',
-                                pack: 'center',
-                                type: 'vbox'
-                            },
-                            title: 'Home',
-                            items: [
-                                {
-                                    xtype: 'label',
-                                    text: 'Home View'
-                                }
-                            ],
-                            tabConfig: {
-                                xtype: 'tab',
-                                flex: 1
-                            }
-                        },
-                        {
-                            xtype: 'panel',
-                            itemId: 'aboutPanel',
-                            layout: {
-                                align: 'center',
-                                pack: 'center',
-                                type: 'vbox'
-                            },
-                            title: 'About Us',
-                            items: [
-                                {
-                                    xtype: 'label',
-                                    text: 'About Us View'
-                                }
-                            ],
-                            tabConfig: {
-                                xtype: 'tab',
-                                flex: 1
-                            }
-                        },
-                        {
-                            xtype: 'panel',
-                            itemId: 'contactPanel',
-                            layout: {
-                                align: 'center',
-                                pack: 'center',
-                                type: 'vbox'
-                            },
-                            title: 'Contact Us',
-                            items: [
-                                {
-                                    xtype: 'label',
-                                    text: 'Contact Us View'
-                                }
-                            ],
-                            tabConfig: {
-                                xtype: 'tab',
-                                flex: 1
-                            }
+                            bodyBorder: false,
+                            bodyPadding: 10,
+                            closable: true,
+                            title: 'Home'
                         }
                     ]
                 }
@@ -152,10 +103,6 @@ Ext.define('sxapim.view.MainView', {
         });
 
         me.callParent(arguments);
-    },
-
-    onMenuClick: function(menu, item, e, eOpts) {
-        location.hash = item.itemId;
     }
 
 });

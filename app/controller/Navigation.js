@@ -18,14 +18,19 @@ Ext.define('sxapim.controller.Navigation', {
 
     refs: [
         {
-            ref: 'contentPanel',
-            selector: '#contentPanel'
+            ref: 'mainPanel',
+            selector: '#mainPanel'
         },
         {
-            ref: 'menu',
-            selector: '#menu'
+            ref: 'mainMenu',
+            selector: '#mainMenu'
         }
     ],
+
+    onMenuitemClick: function(item, e, eOpts) {
+        location.hash = item.itemId;
+        this.navigate(item.itemId);
+    },
 
     onLaunch: function() {
 
@@ -41,12 +46,12 @@ Ext.define('sxapim.controller.Navigation', {
         var ctrl = this;
 
         // Init the Ext history utility
-        Ext.History.init();
+        //Ext.History.init();
 
         // Navigate on hash change
-        Ext.History.on('change', function(hash) {
-            ctrl.navigate(hash);
-        });
+        //Ext.History.on('change', function(hash) {
+        //    ctrl.navigate(hash);
+        //});
 
         // Navigate if initial hash is provided
         var hash = window.location.hash;
@@ -57,21 +62,43 @@ Ext.define('sxapim.controller.Navigation', {
     },
 
     navigate: function(id) {
+        // Use var for controller
+        var ctrl = this;
 
         // Remove # from id if present
         if (id[0] == '#') id = id.slice(1);
 
-        // Get views
-        var menu = this.getMenu(),
-            content = this.getContentPanel();
+        // set variables
+        var panelId = id + 'Panel',
+            tabFound = false,
+            menu = this.getMainMenu(),
+            main = this.getMainPanel();
 
-        // Set active view
-        content.layout.setActiveItem(id + 'Panel');
+        // add and activate tab panel
+        if(main && main.layout) {
+            // Search for existing tab
+            Ext.each(main.layout.getLayoutItems(), function(panel, index) {
+                if(panel.getItemId() == panelId) {
+                    tabFound = true;
+                }
+            });
+
+            // add new tab if doesn't already exist
+            if(!tabFound) {
+                var classname = panelId.charAt(0).toUpperCase() + panelId.slice(1);
+                var newpanelclass = 'sxapim.view.'+classname;
+                var newpanel = Ext.create({
+                 xclass: newpanelclass
+                });
+                main.add(newpanel);
+            }
+            // select appropriate tab
+            main.layout.setActiveItem(panelId);
+        }
 
         // Set menu and page title
-        // Iterate through each menu item
-        if(this.getMenu().items) {
-            this.getMenu().items.each(function(item) {
+        if(menu && menu.items) {
+            menu.items.each(function(item) {
                 // Active
                 if (item.href == '#' + id) {
                     // Disable
@@ -87,6 +114,14 @@ Ext.define('sxapim.controller.Navigation', {
             });
         }
 
+    },
+
+    init: function(application) {
+        this.control({
+            "menuitem": {
+                click: this.onMenuitemClick
+            }
+        });
     }
 
 });

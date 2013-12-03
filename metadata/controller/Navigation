@@ -33,12 +33,12 @@
                     "var ctrl = this;\r",
                     "\r",
                     "// Init the Ext history utility\r",
-                    "Ext.History.init();\r",
+                    "//Ext.History.init();\r",
                     "\r",
                     "// Navigate on hash change\r",
-                    "Ext.History.on('change', function(hash) {\r",
-                    "    ctrl.navigate(hash);\r",
-                    "});\r",
+                    "//Ext.History.on('change', function(hash) {\r",
+                    "//    ctrl.navigate(hash);\r",
+                    "//});\r",
                     "\r",
                     "// Navigate if initial hash is provided\r",
                     "var hash = window.location.hash;\r",
@@ -63,21 +63,43 @@
                 ],
                 "fn": "navigate",
                 "implHandler": [
+                    "// Use var for controller\r",
+                    "var ctrl = this;\r",
                     "\r",
                     "// Remove # from id if present\r",
                     "if (id[0] == '#') id = id.slice(1);\r",
                     "\r",
-                    "// Get views\r",
-                    "var menu = this.getMenu(),\r",
-                    "    content = this.getContentPanel();\r",
+                    "// set variables\r",
+                    "var panelId = id + 'Panel',\r",
+                    "    tabFound = false,\r",
+                    "    menu = this.getMainMenu(),\r",
+                    "    main = this.getMainPanel();\r",
                     "\r",
-                    "// Set active view\r",
-                    "content.layout.setActiveItem(id + 'Panel');\r",
+                    "// add and activate tab panel\r",
+                    "if(main && main.layout) {\r",
+                    "    // Search for existing tab\r",
+                    "    Ext.each(main.layout.getLayoutItems(), function(panel, index) {\r",
+                    "        if(panel.getItemId() == panelId) {\r",
+                    "            tabFound = true;\r",
+                    "        }\r",
+                    "    });\r",
+                    "    \r",
+                    "    // add new tab if doesn't already exist\r",
+                    "    if(!tabFound) {\r",
+                    "        var classname = panelId.charAt(0).toUpperCase() + panelId.slice(1);\r",
+                    "        var newpanelclass = 'sxapim.view.'+classname;\r",
+                    "        var newpanel = Ext.create({\r",
+                    "         xclass: newpanelclass\r",
+                    "        });\r",
+                    "        main.add(newpanel);\r",
+                    "    }\r",
+                    "    // select appropriate tab\r",
+                    "    main.layout.setActiveItem(panelId);\r",
+                    "}\r",
                     "\r",
                     "// Set menu and page title\r",
-                    "// Iterate through each menu item\r",
-                    "if(this.getMenu().items) {\r",
-                    "    this.getMenu().items.each(function(item) {\r",
+                    "if(menu && menu.items) {\r",
+                    "    menu.items.each(function(item) {\r",
                     "        // Active\r",
                     "        if (item.href == '#' + id) {\r",
                     "            // Disable\r",
@@ -105,8 +127,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "ref": "contentPanel",
-                "selector": "#contentPanel"
+                "ref": "mainPanel",
+                "selector": "#mainPanel"
             },
             "designerId": "e376e823-b564-494d-ae35-b5c93c355ea7"
         },
@@ -118,10 +140,30 @@
             },
             "codeClass": null,
             "userConfig": {
-                "ref": "menu",
-                "selector": "#menu"
+                "ref": "mainMenu",
+                "selector": "#mainMenu"
             },
             "designerId": "41f0624a-4a22-408d-8277-bf77cccabf9b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "menuitem",
+                "designer|targetType": "Ext.menu.Item",
+                "fn": "onMenuitemClick",
+                "implHandler": [
+                    "location.hash = item.itemId;\r",
+                    "this.navigate(item.itemId);"
+                ],
+                "name": "click",
+                "scope": "me"
+            },
+            "designerId": "047eedb2-bf0b-4c71-8e5b-0dc1990348e3"
         }
     ]
 }
